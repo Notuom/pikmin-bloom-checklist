@@ -11,16 +11,17 @@ export const About = () => (
       <p>
         Click on the icon corresponding to the collected Decor Pikmin to change
         from ❌ to ✅. It will be saved on this device until you clear your
-        browser's storage.
+        browser&apos;s storage.
       </p>
       <p>
         Click on the icon again to change to 🥚, indicating you are currently
         growing this type/color of Decor Pikmin.
       </p>
       <p>
-        You can also share your progress between devices by using the "Share"
-        button which will generate a URL containing your collection to be sent
-        to the other device, and clear your progress with the "Clear" button.
+        You can also share your progress between devices by using the
+        &quot;Share&quot; button which will generate a URL containing your
+        collection to be sent to the other device, and clear your progress with
+        the &quot;Clear&quot; button.
       </p>
       <h3>Why?</h3>
       <p>
@@ -29,8 +30,13 @@ export const About = () => (
       </p>
       <h3>Decor Pikmin?</h3>
       <p>
-        If you have no idea how Decor Pikmin work, I'd suggest starting here:{" "}
-        <a href="https://www.pikminwiki.com/Decor_Pikmin" target="_blank">
+        If you have no idea how Decor Pikmin work, I&apos;d suggest starting
+        here:{" "}
+        <a
+          href="https://www.pikminwiki.com/Decor_Pikmin"
+          target="_blank"
+          rel="noreferrer"
+        >
           https://www.pikminwiki.com/Decor_Pikmin
         </a>{" "}
         or reading the sections below.
@@ -38,7 +44,7 @@ export const About = () => (
       <h4>How do I get Decor Pikmin?</h4>
       <p>
         In Pikmin Bloom, every Pikmin you get has the potential to become a
-        "Decor Pikmin". This can happen two different ways:
+        &quot;Decor Pikmin&quot;. This can happen two different ways:
       </p>
       <ol>
         <li>
@@ -54,8 +60,8 @@ export const About = () => (
       </ol>
       <h4>How do I know which Decor Pikmin I have?</h4>
       <p>
-        In order to know which ones you already have, you can check your "Decor
-        Collector" badge progress. To do so:
+        In order to know which ones you already have, you can check your
+        &quot;Decor Collector&quot; badge progress. To do so:
       </p>
       <ol>
         <li>
@@ -67,7 +73,7 @@ export const About = () => (
       <p>
         This will show you all the Decor Pikmin you already have. If you want to
         get all the Decors as swiftly as possible, you could mark the Seedlings
-        and Pikmin of a color and type of Decor you don't already have and
+        and Pikmin of a color and type of Decor you don&apos;t already have and
         prioritize growing and making friends with those first.
       </p>
       <h4>How do I know which Decor a Pikmin or Seedling will get?</h4>
@@ -87,7 +93,11 @@ export const About = () => (
       <ul>
         <li>
           Decor Icons retrieved from{" "}
-          <a href="https://www.pikminwiki.com/Decor_Pikmin" target="_blank">
+          <a
+            href="https://www.pikminwiki.com/Decor_Pikmin"
+            target="_blank"
+            rel="noreferrer"
+          >
             https://www.pikminwiki.com/Decor_Pikmin
           </a>
         </li>
@@ -95,6 +105,7 @@ export const About = () => (
           <a
             href="https://thenounproject.com/term/beetle/396855/"
             target="_blank"
+            rel="noreferrer"
           >
             Beetle by Erik Jensen from the Noun Project
           </a>
@@ -103,6 +114,7 @@ export const About = () => (
           <a
             href="https://thenounproject.com/term/banana/2770445/"
             target="_blank"
+            rel="noreferrer"
           >
             banana by Izwar Muis from the Noun Project
           </a>
@@ -111,6 +123,7 @@ export const About = () => (
           <a
             href="https://thenounproject.com/term/mushroom/3194002/"
             target="_blank"
+            rel="noreferrer"
           >
             Mushroom by Adrien Coquet from the Noun Project
           </a>
@@ -119,6 +132,7 @@ export const About = () => (
           <a
             href="https://thenounproject.com/term/acorn/4408016/"
             target="_blank"
+            rel="noreferrer"
           >
             Acorn by KP Arts from the Noun Project
           </a>
@@ -126,7 +140,7 @@ export const About = () => (
       </ul>
       <p>
         Created with{" "}
-        <a href="https://nextjs.org/" target="_blank">
+        <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
           Next.js
         </a>
         .
@@ -134,7 +148,14 @@ export const About = () => (
       <h3>Contributions</h3>
       <p>
         <strong>Suggestions, corrections, bug reports?</strong> Please{" "}
-        <a href="#">file an issue or open a pull request on GitHub</a>.
+        <a
+          href="https://github.com/Notuom/pikmin-bloom-checklist"
+          target="_blank"
+          rel="noreferrer"
+        >
+          file an issue or open a pull request on GitHub
+        </a>
+        .
       </p>
     </footer>
   </>

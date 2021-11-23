@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useRef, useState } from "react";
 import {
   nextValidStatus,
@@ -8,6 +9,7 @@ import { colors, decors, imageSize, statusEmojis } from "../utils/constants";
 import { getShareURL } from "../utils/encoding";
 import {
   capitalizeDecorTitle,
+  decorLoader,
   getDecorIcon,
   getDecorKey,
 } from "../utils/strings";
@@ -53,16 +55,15 @@ export const Checklist = () => {
         <tbody>
           {decors.map((decor) => {
             const title = capitalizeDecorTitle(decor);
-            const imageSrc = getDecorIcon(decor);
 
             return (
               <tr key={decor}>
                 <th>
-                  <img
-                    className={styles.decor}
+                  <Image
+                    loader={decorLoader}
                     alt={title}
                     title={title}
-                    src={imageSrc}
+                    src={getDecorIcon(decor)}
                     width={imageSize}
                     height={imageSize}
                   />

@@ -43,11 +43,6 @@
   background: #d526a4;
 }
 
-img.decor {
-  display: block;
-  margin: 0 auto;
-}
-
 .table td.status {
   cursor: pointer;
 }

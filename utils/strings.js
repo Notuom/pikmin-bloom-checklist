@@ -4,7 +4,9 @@ export const capitalizeDecorTitle = (decorKey) =>
     .map((word) => word[0].toUpperCase() + word.substring(1))
     .join(" ");
 
-export const getDecorIcon = (decorKey) => `/decors/${decorKey}.png`;
+export const getDecorIcon = (decorKey) => `${decorKey}.png`;
+
+export const decorLoader = ({ src }) => `/decors/${src}`;
 
 export const getDecorKey = (decor, color) => `${decor}~${color}`;
 
