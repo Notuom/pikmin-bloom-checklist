@@ -1,0 +1,21 @@
+{
+  "name": "pikmin-bloom-checklist",
+  "description": "A checklist to help you keep track of which type of Decor Pikmin you have collected in the Pikmin Bloom game.",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "12.0.4",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "eslint": "7.32.0",
+    "eslint-config-next": "12.0.4",
+    "prettier": "^2.4.1"
+  }
+}

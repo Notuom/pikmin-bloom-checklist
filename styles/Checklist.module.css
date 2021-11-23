@@ -1,0 +1,57 @@
+.table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table td,
+.table th {
+  border: 1px solid black;
+  background: #d8f0db;
+  vertical-align: middle;
+  text-align: center;
+  padding: 4px;
+  width: 32px;
+  height: 32px;
+}
+
+.table th.red {
+  background: #e22923;
+}
+
+.table th.yellow {
+  background: #e4bd1d;
+}
+
+.table th.blue {
+  background: #0653cc;
+}
+
+.table th.white {
+  background: #fafaff;
+}
+
+.table th.purple {
+  background: #803e9c;
+}
+
+.table th.grey {
+  background: #353434;
+}
+
+.table th.pink {
+  background: #d526a4;
+}
+
+img.decor {
+  display: block;
+  margin: 0 auto;
+}
+
+.table td.status {
+  cursor: pointer;
+}
+
+.button {
+  margin-right: 6px;
+}
