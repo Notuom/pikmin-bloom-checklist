@@ -107,6 +107,9 @@ export const About = () => (
       </p>
     </section>
     <footer>
+      <p>
+        <strong>Version 1.1.0</strong>
+      </p>
       <h3>Credits and licensing</h3>
       <p>
         <strong>Disclaimer:</strong> This web app is not affiliated with Niantic

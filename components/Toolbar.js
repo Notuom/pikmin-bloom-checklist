@@ -35,7 +35,7 @@ export const Toolbar = ({ clear, collection }) => {
 
   return (
     <>
-      <div class={styles.toolbar}>
+      <div className={styles.toolbar}>
         <button className={styles.button} type="button" onClick={confirmClear}>
           Clear
         </button>
