@@ -1,45 +1,20 @@
 import Image from "next/image";
-import { useRef, useState } from "react";
 import {
   nextValidStatus,
-  useDecorCollection,
+  useDecorCollection
 } from "../hooks/useDecorCollection";
 import styles from "../styles/Checklist.module.css";
 import { colors, decors, imageSize, statusEmojis } from "../utils/constants";
-import { getShareURL } from "../utils/encoding";
 import {
   capitalizeDecorTitle,
   decorLoader,
   getDecorIcon,
-  getDecorKey,
+  getDecorKey
 } from "../utils/strings";
+import { Toolbar } from "./Toolbar";
 
 export const Checklist = () => {
-  const [sharedCollectionUrl, setSharedCollectionUrl] = useState("");
-  const [clipboardOutput, setClipboardOutput] = useState("");
-  const sharedCollectionInputRef = useRef();
-
   const { collection, get, set, clear } = useDecorCollection();
-  const confirmClear = () =>
-    confirm(
-      "Are you sure you want to proceed with permanently deleting your progress?"
-    ) && clear();
-
-  const share = (collection) => {
-    const url = getShareURL(collection);
-    setSharedCollectionUrl(url);
-    sharedCollectionInputRef.current?.focus();
-    sharedCollectionInputRef.current?.select();
-
-    navigator.clipboard
-      .writeText(url)
-      .then(() => setClipboardOutput("Share URL copied to clipboard!"))
-      .catch(() =>
-        setClipboardOutput(
-          "Could not access clipboard. Please try again or copy the URL from the text input above."
-        )
-      );
-  };
 
   return (
     <>
@@ -87,25 +62,7 @@ export const Checklist = () => {
           })}
         </tbody>
       </table>
-      <div>
-        <button className={styles.button} type="button" onClick={confirmClear}>
-          Clear
-        </button>
-        <button
-          className={styles.button}
-          type="button"
-          onClick={() => share(collection)}
-        >
-          Share
-        </button>
-        <input
-          type="text"
-          value={sharedCollectionUrl}
-          readOnly
-          ref={sharedCollectionInputRef}
-        />
-      </div>
-      {clipboardOutput && <p>{clipboardOutput}</p>}
+      <Toolbar collection={collection} />
     </>
   );
 };

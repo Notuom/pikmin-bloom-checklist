@@ -4,15 +4,30 @@
   width: 100%;
 }
 
+.table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
 .table td,
 .table th {
   border: 1px solid black;
-  background: #d8f0db;
   vertical-align: middle;
   text-align: center;
   padding: 4px;
   width: 32px;
   height: 32px;
+}
+
+.table tbody tr:nth-child(odd) th,
+.table tbody tr:nth-child(odd) td {
+  background: #d8f0db;
+}
+
+.table tbody tr:nth-child(even) th,
+.table tbody tr:nth-child(even) td {
+  background: #bfd9b8;
 }
 
 .table th.red {
@@ -45,8 +60,4 @@
 
 .table td.status {
   cursor: pointer;
-}
-
-.button {
-  margin-right: 6px;
 }
