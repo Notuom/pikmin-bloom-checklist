@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { nextStatusMap } from "../utils/constants";
 import { decodeCollection } from "../utils/encoding";
 
 const storageKey = "decorCollection";
@@ -48,4 +49,4 @@ export const useDecorCollection = () => {
   return { collection, get, set, clear };
 };
 
-export const nextValidStatus = (i) => i % 3;
+export const cycleStatus = (i) => nextStatusMap[i] ?? 0;

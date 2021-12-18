@@ -2,14 +2,16 @@ import { useEffect, useRef, useState } from "react";
 import styles from "../styles/Toolbar.module.css";
 import { getShareURL } from "../utils/encoding";
 
-export const Toolbar = ({ collection }) => {
+export const Toolbar = ({ clear, collection }) => {
   const [sharedCollectionUrl, setSharedCollectionUrl] = useState("");
   const [clipboardOutput, setClipboardOutput] = useState("");
   const sharedCollectionInputRef = useRef();
 
   useEffect(() => {
-    sharedCollectionInputRef.current?.focus();
-    sharedCollectionInputRef.current?.select();
+    if (sharedCollectionInputRef.current && sharedCollectionUrl !== "") {
+      sharedCollectionInputRef.current?.focus();
+      sharedCollectionInputRef.current?.select();
+    }
   }, [sharedCollectionInputRef, sharedCollectionUrl, clipboardOutput]);
 
   const confirmClear = () =>

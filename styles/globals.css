@@ -27,3 +27,14 @@ h3 {
 h4 {
   font-size: 1rem;
 }
+
+.sticker {
+  display: inline-block;
+  text-align: center;
+  border: 2px solid black;
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  width: 25px;
+  height: 25px;
+  background: #abef99;
+}

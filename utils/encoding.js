@@ -13,8 +13,22 @@
  * This is then encoded as base64 so it can be transferred over a URL.
  */
 
-import { colors, colorsLookupMap, decors, decorsLookupMap } from "./constants";
+import { colors, decors } from "./constants";
 import { getDecorKey, parseDecorKey } from "./strings";
+
+const createLookupMap = (arr) => {
+  const lookup = {};
+
+  for (let index = 0; index < arr.length; index++) {
+    lookup[arr[index]] = index;
+  }
+
+  return lookup;
+};
+
+const decorsLookupMap = createLookupMap(decors);
+
+const colorsLookupMap = createLookupMap(colors);
 
 export const getShareURL = (collection) => {
   const encoded = encodeCollection(collection);

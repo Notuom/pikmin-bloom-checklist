@@ -10,13 +10,19 @@ export const About = () => (
       <h3>How does it work?</h3>
       <p>
         Click on the icon corresponding to the collected Decor Pikmin to change
-        from ❌ to ✅. It will be saved on this device until you clear your
-        browser&apos;s storage.
+        its status: ❌ ➡ 🌿 ➡ 🥚 ➡ ✅.
       </p>
       <p>
-        Click on the icon again to change to 🥚, indicating you are currently
-        growing this type/color of Decor Pikmin.
+        It will be saved on this device until you clear your browser&apos;s
+        storage.
       </p>
+      <p>Legend:</p>
+      <ul>
+        <li>❌: Not acquired</li>
+        <li>🌿: Seedling acquired/growing</li>
+        <li>🥚: Pikmin acquired/growing</li>
+        <li>✅: Acquired</li>
+      </ul>
       <p>
         You can also share your progress between devices by using the
         &quot;Share&quot; button which will generate a URL containing your
@@ -26,7 +32,9 @@ export const About = () => (
       <h3>Why?</h3>
       <p>
         The collection screen in Pikmin is hard to browse. This web app makes it
-        easier to quickly see which Decor Pikmin you are missing.
+        easier to quickly see which Decor Pikmin you are missing. Additionally,
+        the in game collection screen does not allow you to keep track of
+        individual alphabet stickers.
       </p>
       <h3>Decor Pikmin?</h3>
       <p>
@@ -58,6 +66,20 @@ export const About = () => (
           type of place it was found in.
         </li>
       </ol>
+      <h4>
+        What are the stickers (<span className="sticker">A</span> ..{" "}
+        <span className="sticker">Z</span>)?
+      </h4>
+      <p>
+        Roadside Pikmin get a sticker&mdash;undeniably the most boring decor out
+        of them all. However, each of the sticker has a letter which is the
+        first letter from the name of the place the Pikmin was found.
+      </p>
+      <p>
+        If you'd like, you can track which stickers you have for each Pikmin
+        using the sticker rows, though that is optional. The game doesn't
+        currently track this.
+      </p>
       <h4>How do I know which Decor Pikmin I have?</h4>
       <p>
         In order to know which ones you already have, you can check your

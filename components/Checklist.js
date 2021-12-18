@@ -1,16 +1,8 @@
-import Image from "next/image";
-import {
-  nextValidStatus,
-  useDecorCollection
-} from "../hooks/useDecorCollection";
+import { cycleStatus, useDecorCollection } from "../hooks/useDecorCollection";
 import styles from "../styles/Checklist.module.css";
-import { colors, decors, imageSize, statusEmojis } from "../utils/constants";
-import {
-  capitalizeDecorTitle,
-  decorLoader,
-  getDecorIcon,
-  getDecorKey
-} from "../utils/strings";
+import { colors, decors, statusEmojis } from "../utils/constants";
+import { getDecorKey } from "../utils/strings";
+import { DecorHeader } from "./DecorHeader";
 import { Toolbar } from "./Toolbar";
 
 export const Checklist = () => {
@@ -28,41 +20,30 @@ export const Checklist = () => {
           </tr>
         </thead>
         <tbody>
-          {decors.map((decor) => {
-            const title = capitalizeDecorTitle(decor);
+          {decors.map((decor) => (
+            <tr key={decor}>
+              <th>
+                <DecorHeader decor={decor} />
+              </th>
+              {colors.map((color) => {
+                const key = getDecorKey(decor, color);
+                const status = get(key);
 
-            return (
-              <tr key={decor}>
-                <th>
-                  <Image
-                    loader={decorLoader}
-                    alt={title}
-                    title={title}
-                    src={getDecorIcon(decor)}
-                    width={imageSize}
-                    height={imageSize}
-                  />
-                </th>
-                {colors.map((color) => {
-                  const key = getDecorKey(decor, color);
-                  const status = get(key);
-
-                  return (
-                    <td
-                      key={key}
-                      className={styles.status}
-                      onClick={() => set(key, nextValidStatus(status + 1))}
-                    >
-                      {statusEmojis[status]}
-                    </td>
-                  );
-                })}
-              </tr>
-            );
-          })}
+                return (
+                  <td
+                    key={key}
+                    className={styles.status}
+                    onClick={() => set(key, cycleStatus(status))}
+                  >
+                    {statusEmojis[status]}
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
         </tbody>
       </table>
-      <Toolbar collection={collection} />
+      <Toolbar clear={clear} collection={collection} />
     </>
   );
 };
