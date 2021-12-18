@@ -21,7 +21,7 @@ export const About = () => (
         <li>❌: Not acquired</li>
         <li>🌿: Seedling acquired/growing</li>
         <li>🥚: Pikmin acquired/growing</li>
-        <li>✅: Acquired</li>
+        <li>✅: Decor Pikmin Acquired</li>
       </ul>
       <p>
         You can also share your progress between devices by using the
