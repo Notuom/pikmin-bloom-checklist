@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "next build && next export && git checkout gh-pages && cd out && cp -r * ../ && git add -A && git commit -m \"chore: deploy to gh-pages\" && cd .. && git checkout main"
+    "deploy": "next build && next export && git checkout gh-pages && cd out && cp -r * ../ && git add -A && git commit -m \"chore: deploy to gh-pages\" && git push && cd .. && git checkout main"
   },
   "dependencies": {
     "next": "12.0.7",
