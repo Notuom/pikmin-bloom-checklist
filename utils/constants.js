@@ -13,6 +13,7 @@ export const decors = [
   "airport",
   "station",
   "beach",
+  "hamburger-shop",
   "mini-mart",
   "supermarket-1",
   "supermarket-2",
