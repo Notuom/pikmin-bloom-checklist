@@ -1,13 +1,13 @@
 {
   "name": "pikmin-bloom-checklist",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A checklist to help you keep track of which type of Decor Pikmin you have collected in the Pikmin Bloom game.",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "format": "prettier --write .",
     "deploy": "next build && next export && git checkout gh-pages && cd out && cp -r * ../ && git add -A && git commit -m \"chore: deploy to gh-pages\" && git push && cd .. && git checkout main"
   },
   "dependencies": {

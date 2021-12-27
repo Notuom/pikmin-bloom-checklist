@@ -76,9 +76,9 @@ export const About = () => (
         first letter from the name of the place the Pikmin was found.
       </p>
       <p>
-        If you&apos;d like, you can track which stickers you have for each Pikmin
-        using the sticker rows, though that is optional. The game doesn&apos;t
-        currently track this.
+        If you&apos;d like, you can track which stickers you have for each
+        Pikmin using the sticker rows, though that is optional. The game
+        doesn&apos;t currently track this.
       </p>
       <h4>How do I know which Decor Pikmin I have?</h4>
       <p>
@@ -108,7 +108,7 @@ export const About = () => (
     </section>
     <footer>
       <p>
-        <strong>Version 1.1.0</strong>
+        <strong>Version 1.2.0</strong>
       </p>
       <h3>Credits and licensing</h3>
       <p>
