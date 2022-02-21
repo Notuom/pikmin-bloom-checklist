@@ -38,3 +38,16 @@ h4 {
   height: 25px;
   background: #abef99;
 }
+
+.sticker.green {
+  background: rgb(84, 204, 84);
+}
+
+.sticker.orange {
+  background: rgb(214, 153, 39);
+}
+
+.sticker.blue {
+  background: #2f37b1;
+  color: white;
+}

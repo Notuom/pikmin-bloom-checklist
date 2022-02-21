@@ -5,6 +5,7 @@ import {
   DecorStatus,
   DecorType,
   PikminColor,
+  RoadsideStickerColor,
 } from "./types";
 
 /**
@@ -20,7 +21,26 @@ export const colors: PikminColor[] = [
   PikminColor.Pink,
 ];
 
+/**
+ * Characters that can appear on a roadside Pikmin sticker.
+ * 36 individual characters
+ */
 const stickerValues = "abcdefghijklmnopqrstuvwxyz0123456789".split("");
+
+const allCollectionViews = [
+  CollectionView.Simple,
+  CollectionView.Advanced,
+  CollectionView.Exhaustive,
+];
+
+/**
+ * Valid colors for roadside Pikmin stickers used in exhaustive views. Corresponds to a CSS class used for styling the sticker.
+ */
+const roadsideStickerColors: RoadsideStickerColor[] = [
+  RoadsideStickerColor.Green,
+  RoadsideStickerColor.Blue,
+  RoadsideStickerColor.Orange,
+];
 
 /**
  * Location decors are decors based on where the Pikmin was found.
@@ -30,15 +50,12 @@ const createLocationDecor = (key: string): Decor => ({
   type: DecorType.Location,
   title: `Decor Pikmin for: ${capitalizeDecorTitle(key)}`,
   colors,
-  views: [
-    CollectionView.Simple,
-    CollectionView.Advanced,
-    CollectionView.Exhaustive,
-  ],
+  views: allCollectionViews,
 });
 
 /**
- * Alphabet roadside stickers shown in the advanced view
+ * Alphanumeric roadside stickers shown in the Advanced view.
+ * Generates 36 entries
  */
 const createRoadsideDecors = (): Decor[] =>
   stickerValues.map((character) => ({
@@ -50,15 +67,34 @@ const createRoadsideDecors = (): Decor[] =>
   }));
 
 /**
+ * Alphanumeric roadside stickers tracking individual colors; shown in the Exhaustive view.
+ * Generates 108 entries
+ */
+const createRoadsideColorDecors = (): Decor[] =>
+  stickerValues.flatMap<Decor>((character) =>
+    roadsideStickerColors.map((roadsideColor) => ({
+      key: `alpha-${character}-${roadsideColor}`,
+      type: DecorType.Roadside,
+      title: `Roadside Decor Pikmin with ${roadsideColor} sticker: ${character.toUpperCase()}`,
+      colors,
+      views: [CollectionView.Exhaustive],
+      roadsideColor,
+    }))
+  );
+
+/**
  * All the decors that can be obtained. Roadside decor are duplicated,
  * due to the different views containing the same decor in different sticker colors.
- * 
+ *
  * Notes due to encoding restrictions:
  * - If the order of the entries changes, we need to change SCHEMA_VERSION to indicate breaking encoding changes.
- * - This is currently limited to 256 entries due to it being represented in a single byte.
+ * - This is currently limited to 256 entries max due to it being represented in a single byte. (this could also be changed with a breaking schema change)
  * @see ./encoding.ts
+ * 
+ * Current decors count: 170
  */
 export const decors: Decor[] = [
+  // All regular location decors
   createLocationDecor("restaurant"),
   createLocationDecor("cafe"),
   createLocationDecor("sweetshop"),
@@ -82,7 +118,38 @@ export const decors: Decor[] = [
   createLocationDecor("clothing-store"),
   createLocationDecor("park"),
   createLocationDecor("roadside"),
+
+  // Special Decor Pikmin which are custom in every aspect.
+  {
+    key: "special-mario",
+    colors: [PikminColor.Blue],
+    title: "Mario",
+    description: "This Decor Pikmin wears a replica of Mario's signature red cap. A Huge Seedling for this Pikmin can be obtained when the player links their Nintendo Account to the app.",
+    type: DecorType.Special,
+    views: allCollectionViews
+  },
+  {
+    key: "special-lunar-new-year",
+    colors: [PikminColor.Blue, PikminColor.Yellow, PikminColor.Red],
+    title: "Lunar New Year",
+    description: "On February 1st, 2022, to coincide with the Lunar New Year event, a new type of special Decor Pikmin was made obtainable for a limited time. These Decor Pikmin wear red decorations with gold patterns.",
+    type: DecorType.Special,
+    views: allCollectionViews
+  },
+  {
+    key: "special-holiday-stickers",
+    colors,
+    title: "Holiday Sticker",
+    description: "Any Roadside-type Pikmin grown from a seedling that was discovered between December 21st, 2021 to January 11th, 2022 will instead have a Holidays-themed sticker. These stickers are bigger than the regular sticker, with each Pikmin type having a different design.",
+    type: DecorType.Special,
+    views: [CollectionView.Advanced, CollectionView.Exhaustive],
+  },
+  
+  // Roadside decors for display in Advanced view only
   ...createRoadsideDecors(),
+
+  // Detailed Roadside decors for display in Exhaustive view only
+  ...createRoadsideColorDecors(),
 ];
 
 /**

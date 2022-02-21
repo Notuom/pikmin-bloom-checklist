@@ -13,8 +13,11 @@ export const DecorHeader: React.FC<DecorHeaderProps> = ({ decor }) => {
   if (decor.type === DecorType.Roadside) {
     return (
       <>
-        <span title={decor.title} className="sticker">
-          {decor.key.replace("alpha-", "").toUpperCase()}
+        <span
+          title={decor.title}
+          className={`sticker ${decor.roadsideColor ?? ""}`}
+        >
+          {decor.key.split("-")[1].toUpperCase()}
         </span>
       </>
     );

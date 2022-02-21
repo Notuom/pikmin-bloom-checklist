@@ -3,6 +3,7 @@ import Head from "next/head";
 
 import { About } from "../components/About";
 import { Checklist } from "../components/Checklist";
+import { ViewContextProvider } from "../context/ViewContext";
 
 import styles from "../styles/Home.module.css";
 
@@ -19,7 +20,9 @@ const Home: React.FC = () => (
 
     <main>
       <h1>Pikmin Bloom Decor Checklist</h1>
-      <Checklist />
+      <ViewContextProvider>
+        <Checklist />
+      </ViewContextProvider>
     </main>
 
     <About />
