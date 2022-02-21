@@ -15,6 +15,11 @@ export const Checklist: React.FC = () => {
   const { collection, get, set, clear } = useDecorCollection();
   const { view } = useViewContext();
 
+  React.useEffect(() => {
+    // ReactTooltip needs to be told when tooltipped elements on the page change.
+    ReactTooltip.rebuild();
+  }, [view]);
+
   return (
     <>
       <TopToolbar />
