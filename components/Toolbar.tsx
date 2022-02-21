@@ -1,11 +1,19 @@
+import * as React from "react";
+
 import { useEffect, useRef, useState } from "react";
 import styles from "../styles/Toolbar.module.css";
 import { getShareURL } from "../utils/encoding";
+import { DecorCollection } from "../utils/types";
 
-export const Toolbar = ({ clear, collection }) => {
+export interface ToolbarProps {
+  clear: () => void;
+  collection: DecorCollection;
+}
+
+export const Toolbar: React.FC<ToolbarProps> = ({ clear, collection }) => {
   const [sharedCollectionUrl, setSharedCollectionUrl] = useState("");
   const [clipboardOutput, setClipboardOutput] = useState("");
-  const sharedCollectionInputRef = useRef();
+  const sharedCollectionInputRef = useRef<HTMLInputElement>();
 
   useEffect(() => {
     if (sharedCollectionInputRef.current && sharedCollectionUrl !== "") {
@@ -19,7 +27,7 @@ export const Toolbar = ({ clear, collection }) => {
       "Are you sure you want to proceed with permanently deleting your progress?"
     ) && clear();
 
-  const share = (collection) => {
+  const share = (collection: DecorCollection) => {
     const url = getShareURL(collection);
     setSharedCollectionUrl(url);
 

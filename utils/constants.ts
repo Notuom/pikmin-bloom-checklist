@@ -1,4 +1,9 @@
-export const decors = [
+import { DecorStatus, PikminColor } from "./types";
+
+/**
+ * List representing all the decors that can be obtained.
+ */
+export const decors: string[] = [
   "restaurant",
   "cafe",
   "sweetshop",
@@ -50,14 +55,14 @@ export const decors = [
   "alpha-z",
 ];
 
-export const colors = [
-  "red",
-  "yellow",
-  "blue",
-  "white",
-  "purple",
-  "grey",
-  "pink",
+export const colors: PikminColor[] = [
+  PikminColor.Red,
+  PikminColor.Yellow,
+  PikminColor.Blue,
+  PikminColor.White,
+  PikminColor.Purple,
+  PikminColor.Grey,
+  PikminColor.Pink,
 ];
 
 export const imageSize = 24;
@@ -67,11 +72,11 @@ export const imageSize = 24;
  *
  * @param {number} i collection status to change
  */
-export const nextStatusMap = {
-  0: 3, // ❌➡🌿
-  3: 2, // 🌿➡🥚
-  2: 1, // 🥚➡✅
-  1: 0, // ✅➡❌
+export const nextStatusMap: Record<DecorStatus, DecorStatus> = {
+  [DecorStatus.Uncollected]: DecorStatus.Seedling, // ❌➡🌿
+  [DecorStatus.Seedling]: DecorStatus.Growing, // 🌿➡🥚
+  [DecorStatus.Growing]: DecorStatus.Collected, // 🥚➡✅
+  [DecorStatus.Collected]: DecorStatus.Uncollected, // ✅➡❌
 };
 
 /**

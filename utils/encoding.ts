@@ -15,8 +15,9 @@
 
 import { colors, decors } from "./constants";
 import { getDecorKey, parseDecorKey } from "./strings";
+import { DecorCollection, LookupMap } from "./types";
 
-const createLookupMap = (arr) => {
+const createLookupMap = (arr: string[]): LookupMap => {
   const lookup = {};
 
   for (let index = 0; index < arr.length; index++) {
@@ -30,7 +31,7 @@ const decorsLookupMap = createLookupMap(decors);
 
 const colorsLookupMap = createLookupMap(colors);
 
-export const getShareURL = (collection) => {
+export const getShareURL = (collection: DecorCollection) => {
   const encoded = encodeCollection(collection);
   const url = new URL(window.location.href);
   url.searchParams.set("collection", encoded);
@@ -38,7 +39,7 @@ export const getShareURL = (collection) => {
   return url.toString();
 };
 
-const encodeCollection = (collection) => {
+const encodeCollection = (collection: DecorCollection) => {
   const items = Object.entries(collection);
 
   const byteArray = new Uint8Array(1 + items.length * 2);
@@ -54,10 +55,10 @@ const encodeCollection = (collection) => {
     byteArray[i + 1] = (colorIndex << 3) | status;
   }
 
-  return btoa(byteArray);
+  return btoa(byteArray.toString());
 };
 
-export const decodeCollection = (encoded) => {
+export const decodeCollection = (encoded: string) => {
   const byteArray = atob(encoded).split(",").map(Number);
   const collection = {};
 

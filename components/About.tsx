@@ -1,4 +1,6 @@
-export const About = () => (
+import * as React from "react";
+
+export const About: React.FC = () => (
   <>
     <section>
       <h3>What is this?</h3>

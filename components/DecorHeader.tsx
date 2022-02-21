@@ -1,3 +1,5 @@
+import * as React from "react";
+
 import Image from "next/image";
 import { imageSize } from "../utils/constants";
 import {
@@ -6,7 +8,11 @@ import {
   getDecorIcon,
 } from "../utils/strings";
 
-export const DecorHeader = ({ decor }) => {
+export interface DecorHeaderProps {
+  decor: string;
+}
+
+export const DecorHeader: React.FC<DecorHeaderProps> = ({ decor }) => {
   const title = capitalizeDecorTitle(decor);
   const isAlpha = decor.startsWith("alpha-");
   const letter = isAlpha && decor.replace("alpha-", "").toUpperCase();

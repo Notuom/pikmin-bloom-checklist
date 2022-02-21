@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { nextStatusMap } from "../utils/constants";
 import { decodeCollection } from "../utils/encoding";
+import { DecorCollection, DecorStatus } from "../utils/types";
 
 const storageKey = "decorCollection";
 
 export const useDecorCollection = () => {
-  const [collection, setCollection] = useState({});
+  const [collection, setCollection] = useState<DecorCollection>({});
 
-  const setCollectionWithStorage = (newCollection) => {
+  const setCollectionWithStorage = (newCollection: DecorCollection) => {
     setCollection(newCollection);
     localStorage.setItem(storageKey, JSON.stringify(newCollection));
   };
@@ -49,4 +50,4 @@ export const useDecorCollection = () => {
   return { collection, get, set, clear };
 };
 
-export const cycleStatus = (i) => nextStatusMap[i] ?? 0;
+export const cycleStatus = (i: DecorStatus): DecorStatus => nextStatusMap[i] ?? DecorStatus.Uncollected;

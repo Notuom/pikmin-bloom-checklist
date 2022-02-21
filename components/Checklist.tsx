@@ -1,3 +1,5 @@
+import * as React from "react";
+
 import { cycleStatus, useDecorCollection } from "../hooks/useDecorCollection";
 import styles from "../styles/Checklist.module.css";
 import { colors, decors, statusEmojis } from "../utils/constants";
@@ -5,7 +7,7 @@ import { getDecorKey } from "../utils/strings";
 import { DecorHeader } from "./DecorHeader";
 import { Toolbar } from "./Toolbar";
 
-export const Checklist = () => {
+export const Checklist: React.FC = () => {
   const { collection, get, set, clear } = useDecorCollection();
 
   return (
