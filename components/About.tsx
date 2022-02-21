@@ -110,7 +110,7 @@ export const About: React.FC = () => (
     </section>
     <footer>
       <p>
-        <strong>Version 1.2.0</strong>
+        <strong>Version 1.3.0</strong>
       </p>
       <h3>Credits and licensing</h3>
       <p>
