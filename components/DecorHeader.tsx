@@ -10,11 +10,14 @@ export interface DecorHeaderProps {
 }
 
 export const DecorHeader: React.FC<DecorHeaderProps> = ({ decor }) => {
+  const description = decor.description ? `: ${decor.description}` : "";
+  const tooltip = `${decor.title}${description}`;
+
   if (decor.type === DecorType.Roadside) {
     return (
       <>
         <span
-          title={decor.title}
+          data-tip={tooltip}
           className={`sticker ${decor.roadsideColor ?? ""}`}
         >
           {decor.key.split("-")[1].toUpperCase()}
@@ -27,7 +30,7 @@ export const DecorHeader: React.FC<DecorHeaderProps> = ({ decor }) => {
     <Image
       loader={decorLoader}
       alt={decor.title}
-      title={decor.title}
+      data-tip={tooltip}
       src={getDecorIcon(decor.key)}
       width={imageSize}
       height={imageSize}

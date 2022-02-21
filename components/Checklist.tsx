@@ -1,13 +1,15 @@
 import * as React from "react";
-import { useViewContext } from "../context/ViewContext";
+import ReactTooltip from "react-tooltip";
 
+import { useViewContext } from "../context/ViewContext";
 import { cycleStatus, useDecorCollection } from "../hooks/useDecorCollection";
-import styles from "../styles/Checklist.module.css";
 import { colors, decors, statusEmojis } from "../utils/constants";
 import { getDecorKey } from "../utils/strings";
 import { DecorHeader } from "./DecorHeader";
 import { Toolbar } from "./Toolbar";
 import { TopToolbar } from "./TopToolbar";
+
+import styles from "../styles/Checklist.module.css";
 
 export const Checklist: React.FC = () => {
   const { collection, get, set, clear } = useDecorCollection();
@@ -16,6 +18,12 @@ export const Checklist: React.FC = () => {
   return (
     <>
       <TopToolbar />
+      <ReactTooltip
+        place="right"
+        effect="solid"
+        backgroundColor="black"
+        textColor="white"
+      />
       <table className={styles.table}>
         <thead>
           <tr>
@@ -38,7 +46,7 @@ export const Checklist: React.FC = () => {
                     const status = get(key);
 
                     if (!decor.colors.includes(color)) {
-                      return <td className={styles.invalid} />
+                      return <td key={key} className={styles.invalid} />;
                     }
 
                     return (
