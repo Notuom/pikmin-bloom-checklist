@@ -69,8 +69,8 @@ export const About: React.FC = () => (
         </li>
       </ol>
       <h4>
-        What are the stickers (<span className="sticker">A</span> ..{" "}
-        <span className="sticker">Z</span>)?
+        What are the stickers (<span className="sticker">A</span>,{" "}
+        <span className="sticker">0</span>)?
       </h4>
       <p>
         Roadside Pikmin get a sticker&mdash;undeniably the most boring decor out

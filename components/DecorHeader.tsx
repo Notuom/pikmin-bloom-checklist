@@ -1,37 +1,31 @@
 import * as React from "react";
-
 import Image from "next/image";
+
 import { imageSize } from "../utils/constants";
-import {
-  capitalizeDecorTitle,
-  decorLoader,
-  getDecorIcon,
-} from "../utils/strings";
+import { decorLoader, getDecorIcon } from "../utils/strings";
+import { Decor, DecorType } from "../utils/types";
 
 export interface DecorHeaderProps {
-  decor: string;
+  decor: Decor;
 }
 
 export const DecorHeader: React.FC<DecorHeaderProps> = ({ decor }) => {
-  const title = capitalizeDecorTitle(decor);
-  const isAlpha = decor.startsWith("alpha-");
-  const letter = isAlpha && decor.replace("alpha-", "").toUpperCase();
+  if (decor.type === DecorType.Roadside) {
+    return (
+      <>
+        <span title={decor.title} className="sticker">
+          {decor.key.replace("alpha-", "").toUpperCase()}
+        </span>
+      </>
+    );
+  }
 
-  return isAlpha ? (
-    <>
-      <span
-        title={`Roaside Decor Pikmin with sticker: ${letter}`}
-        className="sticker"
-      >
-        {letter}
-      </span>
-    </>
-  ) : (
+  return (
     <Image
       loader={decorLoader}
-      alt={title}
-      title={`Decor Pikmin for: ${title}`}
-      src={getDecorIcon(decor)}
+      alt={decor.title}
+      title={decor.title}
+      src={getDecorIcon(decor.key)}
       width={imageSize}
       height={imageSize}
     />

@@ -2,6 +2,11 @@ import type { ImageLoader } from "next/image";
 
 import { DecorColorPair } from "./types";
 
+/**
+ * Gets a well formatted title from a decor key
+ * @param decorKey hyphenated decor key, i.e. "movie-theater"
+ * @returns well formatted title i.e. "Movie Theater"
+ */
 export const capitalizeDecorTitle = (decorKey: string): string =>
   decorKey
     .split("-")

@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Support 0-9 for roadside stickers
+- Proper versioning and error handling for exporting/import collections
+
+### Changed
+
+- Migrated to TypeScript
+- Refactored decor definition to support views & seasonal/special decors
+
 ## [1.2.0] - 2021-12-27
 
 ### Added

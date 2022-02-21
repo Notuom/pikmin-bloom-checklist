@@ -22,19 +22,24 @@ export const useDecorCollection = () => {
     if (
       urlCollection &&
       confirm(
-        "There was a collection in the URL. Do you want to replace your current collection with that one? This can't be undone."
+        "There was a collection in the URL. Do you want to import & override your current collection? This cannot be undone."
       )
     ) {
-      setCollectionWithStorage(decodeCollection(urlCollection));
+      try {
+        const decoded = decodeCollection(urlCollection);
+        setCollectionWithStorage(decoded);
+      } catch (e) {
+        alert("Could not import collection from URL.\n" + e.message);
+      }
       window.history.pushState({}, null, "/");
     } else if (storageCollection) {
       setCollection(JSON.parse(storageCollection));
     }
   }, []);
 
-  const get = (key) => collection[key] ?? 0;
+  const get = (key: string) => collection[key] ?? 0;
 
-  const set = (key, status) => {
+  const set = (key: string, status: DecorStatus) => {
     const newCollection = { ...collection };
     if (status > 0) {
       newCollection[key] = status;
@@ -50,4 +55,5 @@ export const useDecorCollection = () => {
   return { collection, get, set, clear };
 };
 
-export const cycleStatus = (i: DecorStatus): DecorStatus => nextStatusMap[i] ?? DecorStatus.Uncollected;
+export const cycleStatus = (i: DecorStatus): DecorStatus =>
+  nextStatusMap[i] ?? DecorStatus.Uncollected;

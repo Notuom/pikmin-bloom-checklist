@@ -23,12 +23,12 @@ export const Checklist: React.FC = () => {
         </thead>
         <tbody>
           {decors.map((decor) => (
-            <tr key={decor}>
+            <tr key={decor.key}>
               <th>
                 <DecorHeader decor={decor} />
               </th>
               {colors.map((color) => {
-                const key = getDecorKey(decor, color);
+                const key = getDecorKey(decor.key, color);
                 const status = get(key);
 
                 return (

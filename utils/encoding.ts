@@ -17,6 +17,12 @@ import { colors, decors } from "./constants";
 import { getDecorKey, parseDecorKey } from "./strings";
 import { DecorCollection, LookupMap } from "./types";
 
+/**
+ * Schema version should be updated every time a decor is added in a backwards incompatible way.
+ * Anything except appending new entries at the end of the decors list is backwards incompatible.
+ */
+const SCHEMA_VERSION = 1;
+
 const createLookupMap = (arr: string[]): LookupMap => {
   const lookup = {};
 
@@ -27,7 +33,7 @@ const createLookupMap = (arr: string[]): LookupMap => {
   return lookup;
 };
 
-const decorsLookupMap = createLookupMap(decors);
+const decorsLookupMap = createLookupMap(decors.map((decor) => decor.key));
 
 const colorsLookupMap = createLookupMap(colors);
 
@@ -44,6 +50,7 @@ const encodeCollection = (collection: DecorCollection) => {
 
   const byteArray = new Uint8Array(1 + items.length * 2);
 
+  byteArray[0] = SCHEMA_VERSION;
   for (let i = 1; i < byteArray.length; i += 2) {
     const [key, status] = items.pop();
     const { decor, color } = parseDecorKey(key);
@@ -62,12 +69,21 @@ export const decodeCollection = (encoded: string) => {
   const byteArray = atob(encoded).split(",").map(Number);
   const collection = {};
 
+  const encodedVersion = byteArray[0];
+
+  if (encodedVersion !== SCHEMA_VERSION) {
+    throw new Error(
+      `Decoding failed. The collection was encoded with a previous version (${encodedVersion}), which is not compatible with the current version (${SCHEMA_VERSION}). Please re-share the collection with the latest version of the site.`
+    );
+  }
+
   for (let i = 1; i < byteArray.length; i += 2) {
     const decorIndex = byteArray[i];
     const colorIndex = byteArray[i + 1] >> 3;
     const status = 0b00000111 & byteArray[i + 1];
 
-    collection[getDecorKey(decors[decorIndex], colors[colorIndex])] = status;
+    collection[getDecorKey(decors[decorIndex].key, colors[colorIndex])] =
+      status;
   }
 
   return collection;
