@@ -5,6 +5,7 @@ next build
 next export
 
 git checkout gh-pages
+git pull
 cd out
 cp -r * ../
 
