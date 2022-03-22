@@ -45,10 +45,14 @@ const roadsideStickerColors: RoadsideStickerColor[] = [
 /**
  * Location decors are decors based on where the Pikmin was found.
  */
-const createLocationDecor = (key: string): Decor => ({
+const createLocationDecor = (
+  key: string,
+  overrides?: Partial<Decor>
+): Decor => ({
   key,
   type: DecorType.Location,
-  title: `Decor Pikmin for: ${capitalizeDecorTitle(key)}`,
+  title: overrides?.title ?? `Decor Pikmin for: ${capitalizeDecorTitle(key)}`,
+  description: overrides?.description,
   colors,
   views: allCollectionViews,
 });
@@ -90,7 +94,7 @@ const createRoadsideColorDecors = (): Decor[] =>
  * - If the order of the entries changes, we need to change SCHEMA_VERSION to indicate breaking encoding changes.
  * - This is currently limited to 256 entries max due to it being represented in a single byte. (this could also be changed with a breaking schema change)
  * @see ./encoding.ts
- * 
+ *
  * Current decors count: 170
  */
 export const decors: Decor[] = [
@@ -116,7 +120,12 @@ export const decors: Decor[] = [
   createLocationDecor("bakery"),
   createLocationDecor("hair-salon"),
   createLocationDecor("clothing-store"),
-  createLocationDecor("park"),
+  createLocationDecor("park", { title: "Decor Pikmin for: Park (Clover)" }),
+  createLocationDecor("park-four-leaf-clover", {
+    title: "Decor Pikmin for: Park (Four-Leaf Clover)",
+    description:
+      "This Decor is an extremely rare variation of the regular Clover decor, which shows up more often on St. Patrick's day in Special Event Huge Seedlings.",
+  }),
   createLocationDecor("roadside"),
 
   // Special Decor Pikmin which are custom in every aspect.
@@ -124,27 +133,30 @@ export const decors: Decor[] = [
     key: "special-mario",
     colors: [PikminColor.Blue],
     title: "Mario",
-    description: "This Decor Pikmin wears a replica of Mario's signature red cap. A Huge Seedling for this Pikmin can be obtained when the player links their Nintendo Account to the app.",
+    description:
+      "This Decor Pikmin wears a replica of Mario's signature red cap. A Huge Seedling for this Pikmin can be obtained when the player links their Nintendo Account to the app.",
     type: DecorType.Special,
-    views: allCollectionViews
+    views: allCollectionViews,
   },
   {
     key: "special-lunar-new-year",
     colors: [PikminColor.Blue, PikminColor.Yellow, PikminColor.Red],
     title: "Lunar New Year",
-    description: "On February 1st, 2022, to coincide with the Lunar New Year event, a new type of special Decor Pikmin was made obtainable for a limited time. These Decor Pikmin wear red decorations with gold patterns.",
+    description:
+      "On February 1st, 2022, to coincide with the Lunar New Year event, a new type of special Decor Pikmin was made obtainable for a limited time. These Decor Pikmin wear red decorations with gold patterns.",
     type: DecorType.Special,
-    views: allCollectionViews
+    views: allCollectionViews,
   },
   {
     key: "special-holiday-stickers",
     colors,
     title: "Holiday Sticker",
-    description: "Any Roadside-type Pikmin grown from a seedling that was discovered between December 21st, 2021 to January 11th, 2022 will instead have a Holidays-themed sticker. These stickers are bigger than the regular sticker, with each Pikmin type having a different design.",
+    description:
+      "Any Roadside-type Pikmin grown from a seedling that was discovered between December 21st, 2021 to January 11th, 2022 will instead have a Holidays-themed sticker. These stickers are bigger than the regular sticker, with each Pikmin type having a different design.",
     type: DecorType.Special,
     views: [CollectionView.Advanced, CollectionView.Exhaustive],
   },
-  
+
   // Roadside decors for display in Advanced view only
   ...createRoadsideDecors(),
 

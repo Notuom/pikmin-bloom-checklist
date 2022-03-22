@@ -1,6 +1,6 @@
 {
   "name": "pikmin-bloom-checklist",
-  "version": "1.3.1",
+  "version": "1.4.0",
   "description": "A checklist to help you keep track of which type of Decor Pikmin you have collected in the Pikmin Bloom game.",
   "scripts": {
     "dev": "next dev",
