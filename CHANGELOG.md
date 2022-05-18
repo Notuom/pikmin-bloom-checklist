@@ -9,8 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Added Mini-Mart Snack Decor ((#6)[https://github.com/Notuom/pikmin-bloom-checklist/issues/6])
-- Added Shiny Restaurant Decor ((#7)[https://github.com/Notuom/pikmin-bloom-checklist/issues/7])
+- Added Mini-Mart Snack Decor ([#6](https://github.com/Notuom/pikmin-bloom-checklist/issues/6))
+- Added Shiny Restaurant Decor ([#7](https://github.com/Notuom/pikmin-bloom-checklist/issues/7))
 
 ### Fixed
 
@@ -20,13 +20,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Added Sushi Restaurant Decor ((#5)[https://github.com/Notuom/pikmin-bloom-checklist/issues/5])
+- Added Sushi Restaurant Decor ([#5](https://github.com/Notuom/pikmin-bloom-checklist/issues/5))
 
 ## [1.4.0] - 2022-03-21
 
 ### Added
 
-- Added St. Patrick's Day alternate Park Four Leaf Clover Decor ((#4)[https://github.com/Notuom/pikmin-bloom-checklist/issues/4])
+- Added St. Patrick's Day alternate Park Four Leaf Clover Decor ([#4](https://github.com/Notuom/pikmin-bloom-checklist/issues/4))
 
 ## [1.3.1] - 2022-02-20
 
@@ -39,9 +39,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Support 0-9 for roadside stickers
-- Support seasonal & special decor: Nintendo Account, Roadside Winter Stickers, Lunar New Year ((#3)[https://github.com/Notuom/pikmin-bloom-checklist/issues/3])
+- Support seasonal & special decor: Nintendo Account, Roadside Winter Stickers, Lunar New Year ([#3](https://github.com/Notuom/pikmin-bloom-checklist/issues/3))
 - 3 views which show various levels of detail for decor collections: Simple, Advanced, Exhaustive
-- Support multiple colors for roadside stickers (exhaustive view) ((#2)[https://github.com/Notuom/pikmin-bloom-checklist/issues/2])
+- Support multiple colors for roadside stickers (exhaustive view) ([#2](https://github.com/Notuom/pikmin-bloom-checklist/issues/2))
 - Proper versioning and error handling for exporting/import collections
 - Informative tooltip when clicking decor icons
 
@@ -54,7 +54,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Added hamburger-shop to decors ((#1)[https://github.com/Notuom/pikmin-bloom-checklist/pull/1])
+- Added hamburger-shop to decors ([#1](https://github.com/Notuom/pikmin-bloom-checklist/pull/1))
 
 ## [1.1.0] - 2021-12-17
 
