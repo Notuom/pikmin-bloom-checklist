@@ -43,6 +43,11 @@ const roadsideStickerColors: RoadsideStickerColor[] = [
 ];
 
 /**
+ * Title helper for the basic decor case.
+ */
+const decorTitle = (text: string) => `Decor Pikmin for: ${text}`;
+
+/**
  * Location decors are decors based on where the Pikmin was found.
  */
 const createLocationDecor = (
@@ -51,7 +56,7 @@ const createLocationDecor = (
 ): Decor => ({
   key,
   type: DecorType.Location,
-  title: overrides?.title ?? `Decor Pikmin for: ${capitalizeDecorTitle(key)}`,
+  title: overrides?.title ?? decorTitle(capitalizeDecorTitle(key)),
   description: overrides?.description,
   colors: overrides?.colors ?? colors,
   views: allCollectionViews,
@@ -95,18 +100,27 @@ const createRoadsideColorDecors = (): Decor[] =>
  * - This is currently limited to 256 entries max due to it being represented in a single byte. (this could also be changed with a breaking schema change)
  * @see ./encoding.ts
  *
- * Current decors count: 170
+ * Current decors count: 174
  */
 export const decors: Decor[] = [
   // All regular location decors
   createLocationDecor("restaurant"),
+  {
+    key: "restaurant-shiny",
+    colors: [PikminColor.Blue, PikminColor.Yellow, PikminColor.Red],
+    title: decorTitle("Restaurant (Shiny)"),
+    description:
+      "Rare shiny variation for the Restaurant decor",
+    type: DecorType.Special,
+    views: [CollectionView.Advanced, CollectionView.Exhaustive],
+  },
   createLocationDecor("cafe"),
   createLocationDecor("sweetshop"),
   createLocationDecor("movie-theater"),
   createLocationDecor("pharmacy"),
   createLocationDecor("zoo"),
-  createLocationDecor("forest-1"),
-  createLocationDecor("forest-2"),
+  createLocationDecor("forest-1", { title: decorTitle("Forest (Stag Beetle)") }),
+  createLocationDecor("forest-2", { title: decorTitle("Forest (Acorn)") }),
   createLocationDecor("waterside"),
   createLocationDecor("post-office"),
   createLocationDecor("art-gallery"),
@@ -114,15 +128,16 @@ export const decors: Decor[] = [
   createLocationDecor("station"),
   createLocationDecor("beach"),
   createLocationDecor("hamburger-shop"),
-  createLocationDecor("mini-mart"),
-  createLocationDecor("supermarket-1"),
-  createLocationDecor("supermarket-2"),
+  createLocationDecor("mini-mart", { title: decorTitle("Mini Mart (Bottle Cap)") }),
+  createLocationDecor("mini-mart-2", { title: decorTitle("Mini Mart (Snack)") }),
+  createLocationDecor("supermarket-1", { title: decorTitle("Supermarket (Mushroom)") }),
+  createLocationDecor("supermarket-2", { title: decorTitle("Supermarket (Banana)") }),
   createLocationDecor("bakery"),
   createLocationDecor("hair-salon"),
   createLocationDecor("clothing-store"),
-  createLocationDecor("park", { title: "Decor Pikmin for: Park (Clover)" }),
+  createLocationDecor("park", { title: decorTitle("Park (Clover)") }),
   createLocationDecor("park-four-leaf-clover", {
-    title: "Decor Pikmin for: Park (Four-Leaf Clover)",
+    title: decorTitle("Park (Four-Leaf Clover)"),
     description:
       "This Decor is an extremely rare variation of the regular Clover decor, which shows up more often on St. Patrick's day in Special Event Huge Seedlings.",
   }),

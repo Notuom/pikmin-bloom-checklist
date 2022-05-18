@@ -5,17 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.6.0] - 2022-05-17
+
+### Added
+
+- Added Mini-Mart Snack Decor ((#6)[https://github.com/Notuom/pikmin-bloom-checklist/issues/6])
+- Added Shiny Restaurant Decor ((#7)[https://github.com/Notuom/pikmin-bloom-checklist/issues/7])
+
+### Fixed
+
+- Upgraded `minimist` dependency to fix vulnerability
+
 ## [1.5.0] - 2022-04-12
 
 ### Added
 
-- Added Sushi Restaurant Decor
+- Added Sushi Restaurant Decor ((#5)[https://github.com/Notuom/pikmin-bloom-checklist/issues/5])
 
 ## [1.4.0] - 2022-03-21
 
 ### Added
 
-- Added St. Patrick's Day alternate Park Four Leaf Clover Decor
+- Added St. Patrick's Day alternate Park Four Leaf Clover Decor ((#4)[https://github.com/Notuom/pikmin-bloom-checklist/issues/4])
 
 ## [1.3.1] - 2022-02-20
 
@@ -28,9 +39,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Support 0-9 for roadside stickers
-- Support seasonal & special decor: Nintendo Account, Roadside Winter Stickers, Lunar New Year
+- Support seasonal & special decor: Nintendo Account, Roadside Winter Stickers, Lunar New Year ((#3)[https://github.com/Notuom/pikmin-bloom-checklist/issues/3])
 - 3 views which show various levels of detail for decor collections: Simple, Advanced, Exhaustive
-- Support multiple colors for roadside stickers (exhaustive view)
+- Support multiple colors for roadside stickers (exhaustive view) ((#2)[https://github.com/Notuom/pikmin-bloom-checklist/issues/2])
 - Proper versioning and error handling for exporting/import collections
 - Informative tooltip when clicking decor icons
 
@@ -43,7 +54,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Added hamburger-shop to decors
+- Added hamburger-shop to decors ((#1)[https://github.com/Notuom/pikmin-bloom-checklist/pull/1])
 
 ## [1.1.0] - 2021-12-17
 
@@ -72,7 +83,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Sharing via URL
 - "About" section
 
-[unreleased]: https://github.com/Notuom/pikmin-bloom-checklist/compare/v1.5.0...HEAD
+[unreleased]: https://github.com/Notuom/pikmin-bloom-checklist/compare/v1.6.0...HEAD
+[1.6.0]: https://github.com/Notuom/pikmin-bloom-checklist/compare/v1.5.0...v1.6.0
 [1.5.0]: https://github.com/Notuom/pikmin-bloom-checklist/compare/v1.4.0...v1.5.0
 [1.4.0]: https://github.com/Notuom/pikmin-bloom-checklist/compare/v1.3.1...v1.4.0
 [1.3.1]: https://github.com/Notuom/pikmin-bloom-checklist/compare/v1.3.0...v1.3.1

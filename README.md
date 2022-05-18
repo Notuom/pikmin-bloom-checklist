@@ -6,7 +6,9 @@ Published on [pikmin-bloom-checklist.notuom.com](https://pikmin-bloom-checklist.
 
 ## Local Development
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). Tested with Node 16 LTS.
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and hosted on [GitHub Pages](https://pages.github.com/).
+
+Developed & tested with Node 16 LTS.
 
 First, run the development server:
 

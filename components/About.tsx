@@ -110,7 +110,7 @@ export const About: React.FC = () => (
     </section>
     <footer>
       <p>
-        <strong>Version 1.5.0 ([Changelog](https://github.com/Notuom/pikmin-bloom-checklist/blob/main/CHANGELOG.md))</strong>
+        <strong>Version 1.6.0 ([Changelog](https://github.com/Notuom/pikmin-bloom-checklist/blob/main/CHANGELOG.md))</strong>
       </p>
       <h3>Credits and licensing</h3>
       <p>
