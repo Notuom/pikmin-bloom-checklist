@@ -142,8 +142,8 @@ export const decors: Decor[] = [
     description:
       "This Decor is an extremely rare variation of the regular Clover decor, which shows up more often on St. Patrick's day in Special Event Huge Seedlings.",
   }),
-  createLocationDecor("roadside"),
   createLocationDecor("library"),
+  createLocationDecor("roadside"),
   createLocationDecor("sushi", { colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue]}),
   createLocationDecor("mountain", { colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue]}),
   createLocationDecor("weather-1", { colors: [PikminColor.Blue]}),
