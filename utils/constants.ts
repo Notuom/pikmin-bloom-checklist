@@ -146,6 +146,9 @@ export const decors: Decor[] = [
   createLocationDecor("library"),
   createLocationDecor("sushi", { colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue]}),
   createLocationDecor("mountain", { colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue]}),
+  createLocationDecor("weather-1", { colors: [PikminColor.Blue]}),
+  createLocationDecor("weather-2", { colors: [PikminColor.Blue]}),
+  createLocationDecor("weather-3", { colors: [PikminColor.Blue]}),
 
   // Special Decor Pikmin which are custom in every aspect.
   {
