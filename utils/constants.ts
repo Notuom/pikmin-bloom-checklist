@@ -167,6 +167,15 @@ export const decors: Decor[] = [
     views: allCollectionViews,
   },
   {
+    key: "special-chess",
+    colors: [PikminColor.Yellow, PikminColor.Blue, PikminColor.White, PikminColor.Purple],
+    title: "Chess Piece",
+    description:
+      "To celebrate the International Chess Day on July 20th, a special Decor Pikmin was made obtainable from July 18th until July 31st, 2022. They will be available in the future again.",
+    type: DecorType.Special,
+    views: allCollectionViews,
+  },
+  {
     key: "special-holiday-stickers",
     colors,
     title: "Holiday Sticker",
