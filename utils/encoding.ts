@@ -21,7 +21,7 @@ import { DecorCollection, LookupMap } from "./types";
  * Schema version should be updated every time a decor is added in a backwards incompatible way.
  * Anything except appending new entries at the end of the decors list is backwards incompatible.
  */
-const SCHEMA_VERSION = 3;
+const SCHEMA_VERSION = 4;
 
 const createLookupMap = (arr: string[]): LookupMap => {
   const lookup = {};
