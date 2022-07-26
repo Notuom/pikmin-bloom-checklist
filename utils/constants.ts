@@ -125,11 +125,12 @@ export const decors: Decor[] = [
   createLocationDecor("post-office"),
   createLocationDecor("art-gallery"),
   createLocationDecor("airport"),
-  createLocationDecor("station"),
+  createLocationDecor("station", { title: decorTitle("Train station (Paper train)")}),
+  createLocationDecor("station-2", { title: decorTitle("Train station (Ticket)")}),
   createLocationDecor("beach"),
   createLocationDecor("hamburger-shop"),
-  createLocationDecor("mini-mart", { title: decorTitle("Mini Mart (Bottle Cap)") }),
-  createLocationDecor("mini-mart-2", { title: decorTitle("Mini Mart (Snack)") }),
+  createLocationDecor("mini-mart", { title: decorTitle("Corner Store (Bottle Cap)") }),
+  createLocationDecor("mini-mart-2", { title: decorTitle("Corner Store (Snack)") }),
   createLocationDecor("supermarket-1", { title: decorTitle("Supermarket (Mushroom)") }),
   createLocationDecor("supermarket-2", { title: decorTitle("Supermarket (Banana)") }),
   createLocationDecor("bakery"),
@@ -141,8 +142,13 @@ export const decors: Decor[] = [
     description:
       "This Decor is an extremely rare variation of the regular Clover decor, which shows up more often on St. Patrick's day in Special Event Huge Seedlings.",
   }),
+  createLocationDecor("library"),
   createLocationDecor("roadside"),
   createLocationDecor("sushi", { colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue]}),
+  createLocationDecor("mountain", { colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue]}),
+  createLocationDecor("weather-1", { colors: [PikminColor.Blue]}),
+  createLocationDecor("weather-2", { colors: [PikminColor.Blue]}),
+  createLocationDecor("weather-3", { colors: [PikminColor.Blue]}),
 
   // Special Decor Pikmin which are custom in every aspect.
   {
@@ -160,6 +166,15 @@ export const decors: Decor[] = [
     title: "Lunar New Year",
     description:
       "On February 1st, 2022, to coincide with the Lunar New Year event, a new type of special Decor Pikmin was made obtainable for a limited time. These Decor Pikmin wear red decorations with gold patterns.",
+    type: DecorType.Special,
+    views: allCollectionViews,
+  },
+  {
+    key: "special-chess",
+    colors: [PikminColor.Yellow, PikminColor.Blue, PikminColor.White, PikminColor.Purple],
+    title: "Chess Piece",
+    description:
+      "To celebrate the International Chess Day on July 20th, a special Decor Pikmin was made obtainable from July 18th until July 31st, 2022. They will be available in the future again.",
     type: DecorType.Special,
     views: allCollectionViews,
   },

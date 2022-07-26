@@ -164,6 +164,15 @@ export const About: React.FC = () => (
             Acorn by KP Arts from the Noun Project
           </a>
         </li>
+        <li>
+          <a
+            href="https://thenounproject.com/icon/chess-piece-2375089/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Chess Piece by Vectors Point from NounProject.com
+          </a>
+        </li>
       </ul>
       <p>
         Created with{" "}
