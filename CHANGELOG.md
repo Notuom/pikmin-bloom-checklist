@@ -1,5 +1,9 @@
 # Changelog
 
+**Note:** This changelog is unmaintained as of 07/25/2022.
+
+---
+
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
