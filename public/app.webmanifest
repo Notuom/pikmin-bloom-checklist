@@ -1,0 +1,42 @@
+{
+  "name": "Pikmin Bloom Checklist",
+  "short_name": "Pikmin Bloom Checklist",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "description": "Checklist that makes it easier to keep track of which Decor Pikmin you are missing.",
+  "background_color": "#27cb2e",
+  "theme_color": "#27cb2e",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+        "src": "/icons/android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    },
+    {
+      "src": "/icons/maskable_icon_x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/maskable_icon_x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/icons/screenshot_320x640.png",
+      "sizes": "320x640",
+      "type": "image/png"
+    }
+  ]
+}

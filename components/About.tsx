@@ -116,6 +116,42 @@ export const About: React.FC = () => (
       </p>
       <ul>
         <li>
+          Application icon created from{" "}
+          <a
+            href="https://thenounproject.com/icon/checklist-5020438/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Checklist by Mada Creative from NounProject.com
+          </a>
+          {" "}and{" "}
+          <a
+            href="https://thenounproject.com/icon/flower-5021607/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Flower by Ria Fitriana from NounProject.com
+          </a>
+          {" "}using{" "}
+          <a
+            href="https://www.gimp.org/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Gimp
+          </a>.
+          Favicons created using{" "}
+          <a
+            href="https://realfavicongenerator.net"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Favicon Generator
+          </a>
+          {" "}and{" "}
+          <a href="https://maskable.app/editor">Maskable.app</a>.
+        </li>
+        <li>
           Decor Icons retrieved from{" "}
           <a
             href="https://www.pikminwiki.com/Decor_Pikmin"
