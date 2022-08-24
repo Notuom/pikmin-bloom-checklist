@@ -59,7 +59,7 @@ const createLocationDecor = (
   title: overrides?.title ?? decorTitle(capitalizeDecorTitle(key)),
   description: overrides?.description,
   colors: overrides?.colors ?? colors,
-  views: allCollectionViews,
+  views: overrides?.views ?? allCollectionViews,
 });
 
 /**
@@ -149,6 +149,8 @@ export const decors: Decor[] = [
   createLocationDecor("weather-1", { colors: [PikminColor.Blue]}),
   createLocationDecor("weather-2", { colors: [PikminColor.Blue]}),
   createLocationDecor("weather-3", { colors: [PikminColor.Blue]}),
+  createLocationDecor("themepark-1", { title: decorTitle("Theme Park"), colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue]}),
+  createLocationDecor("themepark-2", { title: decorTitle("Theme Park (alternative design)"), colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue], views: [CollectionView.Advanced, CollectionView.Exhaustive]}),
 
   // Special Decor Pikmin which are custom in every aspect.
   {
