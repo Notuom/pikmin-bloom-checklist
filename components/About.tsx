@@ -206,6 +206,15 @@ export const About: React.FC = () => (
             Chess Piece by Vectors Point from NounProject.com
           </a>
         </li>
+        <li>
+          <a
+            href="https://thenounproject.com/icon/skateboard-1293915/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Skateboard by Orin zuu from Noun Project
+          </a>
+        </li>
       </ul>
       <p>
         Created with{" "}
