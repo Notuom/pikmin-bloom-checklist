@@ -181,6 +181,15 @@ export const decors: Decor[] = [
     views: allCollectionViews,
   },
   {
+    key: "special-fingerboard",
+    colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Purple, PikminColor.Pink],
+    title: "Fingerboard",
+    description:
+      "A special Decor Pikmin made obtainable for two weeks from August 15th 2022.",
+    type: DecorType.Special,
+    views: allCollectionViews,
+  },
+  {
     key: "special-holiday-stickers",
     colors,
     title: "Holiday Sticker",
