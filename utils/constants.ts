@@ -151,6 +151,7 @@ export const decors: Decor[] = [
   createLocationDecor("weather-3", { colors: [PikminColor.Blue]}),
   createLocationDecor("themepark-1", { title: decorTitle("Theme Park"), colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue]}),
   createLocationDecor("themepark-2", { title: decorTitle("Theme Park (alternative design)"), colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue], views: [CollectionView.Advanced, CollectionView.Exhaustive]}),
+  createLocationDecor("bus-stop"),
 
   // Special Decor Pikmin which are custom in every aspect.
   {
@@ -186,6 +187,33 @@ export const decors: Decor[] = [
     title: "Fingerboard",
     description:
       "A special Decor Pikmin made obtainable for two weeks from August 15th 2022.",
+    type: DecorType.Special,
+    views: allCollectionViews,
+  },
+  {
+    key: "special-flower-card",
+    colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue, PikminColor.Purple],
+    title: "Flower card",
+    description:
+      "On September 5th, 2022, a new type of special Decor Pikmin wearing hanafuda cards was made obtainable for 3 weeks.",
+    type: DecorType.Special,
+    views: allCollectionViews,
+  },
+  {
+    key: "special-halloween",
+    colors,
+    title: "Jack-o'-lantern",
+    description:
+      "Special Decor Pikmin for the 2022 Halloween event.",
+    type: DecorType.Special,
+    views: allCollectionViews,
+  },
+  {
+    key: "special-anniversary-snack",
+    colors,
+    title: "First Anniversary Snack",
+    description:
+      "On November 1st, 2022, for the first anniversary, a new type of special Decor Pikmin was made obtainable for 2 weeks.",
     type: DecorType.Special,
     views: allCollectionViews,
   },
