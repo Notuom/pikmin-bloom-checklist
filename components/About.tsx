@@ -215,6 +215,33 @@ export const About: React.FC = () => (
             Skateboard by Orin zuu from Noun Project
           </a>
         </li>
+        <li>
+          <a
+            href="https://thenounproject.com/icon/pumpkin-700084/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            pumpkin by Yeong Rong Kim from Noun Project
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://thenounproject.com/icon/june-of-hwatu-1629155/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            june of hwatu by 1516 from Noun Project
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://thenounproject.com/icon/candy-4080734/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            candy by alfian dwi hartanto from Noun Project
+          </a>
+        </li>
       </ul>
       <p>
         Created with{" "}
