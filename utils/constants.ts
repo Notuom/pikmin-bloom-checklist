@@ -168,7 +168,16 @@ export const decors: Decor[] = [
     colors: [PikminColor.Blue, PikminColor.Yellow, PikminColor.Red],
     title: "Lunar New Year",
     description:
-      "On February 1st, 2022, to coincide with the Lunar New Year event, a new type of special Decor Pikmin was made obtainable for a limited time. These Decor Pikmin wear red decorations with gold patterns.",
+      "On February 1st, 2022, and again in 2023, to coincide with the Lunar New Year event, a new type of special Decor Pikmin was made obtainable for a limited time. These Decor Pikmin wear red decorations with gold patterns.",
+    type: DecorType.Special,
+    views: allCollectionViews,
+  },
+  {
+    key: "special-lunar-new-year-2023",
+    colors: [PikminColor.Blue, PikminColor.Yellow, PikminColor.Red],
+    title: "Lunar New Year 2023",
+    description:
+      "On January 21st, 2023, to coincide with the Lunar New Year event, a new type of special Decor Pikmin was made obtainable for a limited time. These Decor Pikmin wear gold decorations with red patterns.",
     type: DecorType.Special,
     views: allCollectionViews,
   },
@@ -214,6 +223,42 @@ export const decors: Decor[] = [
     title: "First Anniversary Snack",
     description:
       "On November 1st, 2022, for the first anniversary, a new type of special Decor Pikmin was made obtainable for 2 weeks.",
+    type: DecorType.Special,
+    views: allCollectionViews,
+  },
+  {
+    key: "special-mitten",
+    colors: [PikminColor.Blue, PikminColor.Yellow, PikminColor.Red],
+    title: "Mitten",
+    description:
+      "From December 12th to December 31st, 2022, a new type of Decor Pikmin was obtainable for an event. These Decor Pikmin wear small mittens on their heads.",
+    type: DecorType.Special,
+    views: allCollectionViews,
+  },
+  {
+    key: "special-space-suit",
+    colors: [PikminColor.Blue, PikminColor.Yellow, PikminColor.Red],
+    title: "Koppaite Space Suit",
+    description:
+      "From November 28th to December 9th, 2022, there was an event themed around Pikmin 3 Deluxe, where 3 types of Decor Pikmin could be obtained by completing flower planting missions.",
+    type: DecorType.Special,
+    views: allCollectionViews,
+  },
+  {
+    key: "special-2023-glasses",
+    colors,
+    title: "2023 glasses",
+    description:
+      "From December 26th, 2022 to January 15th, 2023, for the 2023 New Year event, a new type of Decor Pikmin was obtainable for 3 weeks. These Decor Pikmin wear appropriately sized New Year's glasses on their heads.",
+    type: DecorType.Special,
+    views: allCollectionViews,
+  },
+  {
+    key: "special-present-sticker",
+    colors,
+    title: "Present Sticker",
+    description:
+      "From February 6th, 2023, to February 26th, 2023, for Valentine's Day 2023, a new type of Decor Pikmin was obtainable for 3 weeks. These decor Pikmin wear pink oversized 'present' stickers.",
     type: DecorType.Special,
     views: allCollectionViews,
   },
