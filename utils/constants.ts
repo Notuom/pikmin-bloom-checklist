@@ -152,7 +152,7 @@ export const decors: Decor[] = [
   createLocationDecor("themepark-1", { title: decorTitle("Theme Park"), colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue]}),
   createLocationDecor("themepark-2", { title: decorTitle("Theme Park (alternative design)"), colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue], views: [CollectionView.Advanced, CollectionView.Exhaustive]}),
   createLocationDecor("bus-stop"),
-
+  createLocationDecor("italian-restaurant"),
   // Special Decor Pikmin which are custom in every aspect.
   {
     key: "special-mario",
