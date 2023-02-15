@@ -123,33 +123,28 @@ export const About: React.FC = () => (
             rel="noreferrer"
           >
             Checklist by Mada Creative from NounProject.com
-          </a>
-          {" "}and{" "}
+          </a>{" "}
+          and{" "}
           <a
             href="https://thenounproject.com/icon/flower-5021607/"
             target="_blank"
             rel="noreferrer"
           >
             Flower by Ria Fitriana from NounProject.com
-          </a>
-          {" "}using{" "}
-          <a
-            href="https://www.gimp.org/"
-            target="_blank"
-            rel="noreferrer"
-          >
+          </a>{" "}
+          using{" "}
+          <a href="https://www.gimp.org/" target="_blank" rel="noreferrer">
             Gimp
-          </a>.
-          Favicons created using{" "}
+          </a>
+          . Favicons created using{" "}
           <a
             href="https://realfavicongenerator.net"
             target="_blank"
             rel="noreferrer"
           >
             Favicon Generator
-          </a>
-          {" "}and{" "}
-          <a href="https://maskable.app/editor">Maskable.app</a>.
+          </a>{" "}
+          and <a href="https://maskable.app/editor">Maskable.app</a>.
         </li>
         <li>
           Decor Icons retrieved from{" "}
@@ -240,6 +235,51 @@ export const About: React.FC = () => (
             rel="noreferrer"
           >
             candy by alfian dwi hartanto from Noun Project
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.flaticon.com/free-icon/2023-2025_9243079"
+            target="_blank"
+            rel="noreferrer"
+          >
+            2023 icons created by muhammad atho' from Flaticon
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://thenounproject.com/icon/envelope-5393196/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            envelope by Icon Market from Noun Project
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://thenounproject.com/icon/envelope-5395044/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            envelope (inverted) by Icon Market from Noun Project
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://thenounproject.com/icon/space-suit-1652614/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            space suit by Maxim Kulikov from Noun Project
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://thenounproject.com/icon/mitten-2099950/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            mitten by Ninejipjip from Noun Project
           </a>
         </li>
       </ul>
