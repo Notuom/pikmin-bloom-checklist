@@ -243,7 +243,7 @@ export const About: React.FC = () => (
             target="_blank"
             rel="noreferrer"
           >
-            2023 icons created by muhammad atho' from Flaticon
+            2023 icons created by muhammad atho from Flaticon
           </a>
         </li>
         <li>
