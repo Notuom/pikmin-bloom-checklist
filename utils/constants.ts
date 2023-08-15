@@ -284,6 +284,15 @@ export const decors: Decor[] = [
     views: allCollectionViews,
   },
   {
+    key: "special-spaceship",
+    colors,
+    title: "Pikmin 4 Spaceships",
+    description:
+        "Pikmin 4 Spaceships",
+    type: DecorType.Special,
+    views: allCollectionViews,
+  },
+  {
     key: "special-holiday-stickers",
     colors,
     title: "Holiday Sticker",
