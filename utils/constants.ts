@@ -194,7 +194,7 @@ export const decors: Decor[] = [
   },
   {
     key: "special-fingerboard",
-    colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Purple, PikminColor.Pink],
+    colors,
     title: "Fingerboard",
     description:
       "A special Decor Pikmin made obtainable for two weeks from August 15th 2022.",
