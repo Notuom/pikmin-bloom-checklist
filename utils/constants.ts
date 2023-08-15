@@ -281,6 +281,15 @@ export const decors: Decor[] = [
     type: DecorType.Special,
     views: [CollectionView.Advanced, CollectionView.Exhaustive],
   },
+  {
+    key: "special-roadside-coin",
+    colors,
+    title: "Roadside Coin",
+    description:
+        "These Pikmin only have 1 type per Pikmin, unlike the sticker type, and the coins present on the Pikmin are from all around the world.",
+    type: DecorType.Special,
+    views: [CollectionView.Advanced, CollectionView.Exhaustive],
+  },
 
   // Roadside decors for display in Advanced view only
   ...createRoadsideDecors(),
