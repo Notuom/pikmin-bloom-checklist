@@ -264,20 +264,20 @@ export const decors: Decor[] = [
     views: allCollectionViews,
   },
   {
-    key: "special-holiday-stickers",
-    colors,
-    title: "Holiday Sticker",
-    description:
-      "Any Roadside-type Pikmin grown from a seedling that was discovered between December 21st, 2021 to January 11th, 2022 will instead have a Holidays-themed sticker. These stickers are bigger than the regular sticker, with each Pikmin type having a different design.",
-    type: DecorType.Special,
-    views: [CollectionView.Advanced, CollectionView.Exhaustive],
-  },
-  {
     key: "special-easter-egg",
     colors,
     title: "Easter Egg",
     description:
         "From April 1st to April 30th, 2023, for the Easter event, a new set of Decor Pikmin were obtainable. Those Decor Pikmin wore colored egg shells in celebration of Easter.",
+    type: DecorType.Special,
+    views: allCollectionViews,
+  },
+  {
+    key: "special-holiday-stickers",
+    colors,
+    title: "Holiday Sticker",
+    description:
+      "Any Roadside-type Pikmin grown from a seedling that was discovered between December 21st, 2021 to January 11th, 2022 will instead have a Holidays-themed sticker. These stickers are bigger than the regular sticker, with each Pikmin type having a different design.",
     type: DecorType.Special,
     views: [CollectionView.Advanced, CollectionView.Exhaustive],
   },
