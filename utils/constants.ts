@@ -274,6 +274,15 @@ export const decors: Decor[] = [
     views: allCollectionViews,
   },
   {
+    key: "special-sneakers",
+    colors,
+    title: "Sneaker Keychain",
+    description:
+        "From May 8th, 2023 through until after May 31st, 2023, gold seedlings from event challenges and referral codes reward players with Sneaker Keychain decor Pikmin.",
+    type: DecorType.Special,
+    views: allCollectionViews,
+  },
+  {
     key: "special-holiday-stickers",
     colors,
     title: "Holiday Sticker",
