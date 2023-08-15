@@ -272,6 +272,15 @@ export const decors: Decor[] = [
     type: DecorType.Special,
     views: [CollectionView.Advanced, CollectionView.Exhaustive],
   },
+  {
+    key: "special-easter-egg",
+    colors,
+    title: "Easter Egg",
+    description:
+        "From April 1st to April 30th, 2023, for the Easter event, a new set of Decor Pikmin were obtainable. Those Decor Pikmin wore colored egg shells in celebration of Easter.",
+    type: DecorType.Special,
+    views: [CollectionView.Advanced, CollectionView.Exhaustive],
+  },
 
   // Roadside decors for display in Advanced view only
   ...createRoadsideDecors(),
