@@ -156,6 +156,9 @@ export const decors: Decor[] = [
   createLocationDecor("bus-stop"),
   createLocationDecor("italian-restaurant"),
   createLocationDecor("ramen-restaurant", { colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue]}),
+  createLocationDecor("bridge", { colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue]}),
+  createLocationDecor("hotel"),
+
   // Special Decor Pikmin which are custom in every aspect.
   {
     key: "special-mario",
