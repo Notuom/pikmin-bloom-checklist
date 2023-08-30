@@ -18,3 +18,22 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+# Contributing
+
+Contributions are welcome!
+
+## Adding Decors
+
+The most common type of update is adding missing decors. Here are the steps required:
+
+1. Find a suitable icon for the decor. Usually, a 24px transparent square png in black or an outline works well.
+2. Usually, free icons online come with an attribution license. Copy the attribution link into your clipboard.
+3. Download the image from the icon website; copy it to the `/public/decors` folder. Its filename should match the existing naming patterns.
+3. Edit `src/utils/constants.ts`. Change the `decors` array. The order is important; ensure the logical order is respected (regular -> special -> exhaustive). See existing decors for plentiful examples. The `key` should match the filename of the downloaded icon.
+4. In the same file, change the `attributions` array. Add the `link`, `text`, and `title` required by the site you downloaded the icon from.
+5. Run the app locally using `npm run dev`; validate it works as expected.
+
+## New Features
+
+For new features, please create an issue to discuss the feature and the suggested approach first. Once the general idea and design is approved, you can create a pull request.
