@@ -190,9 +190,18 @@ export const decors: Decor[] = [
   {
     key: "special-chess",
     colors,
-    title: "Chess Piece",
+    title: "Chess Piece (Black)",
     description:
       "To celebrate the International Chess Day on July 20th, a special Decor Pikmin was made obtainable from July 18th until July 31st, 2022. They will be available in the future again.",
+    type: DecorType.Special,
+    views: allCollectionViews,
+  },
+  {
+    key: "special-chess-white",
+    colors,
+    title: "Chess Piece (White)",
+    description:
+      "Chess Day 2023. In this event, the time when you collect the gold seedlings influences the chess piece color your Pikmin will wear. Colors rotate weekly.",
     type: DecorType.Special,
     views: allCollectionViews,
   },
