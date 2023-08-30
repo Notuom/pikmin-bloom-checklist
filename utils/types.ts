@@ -58,3 +58,9 @@ export interface Decor {
   // Only for "Roadside" decor: the sticker color
   roadsideColor?: RoadsideStickerColor;
 }
+
+export interface Attribution {
+  link: string;
+  text: string;
+  title?: string;
+}

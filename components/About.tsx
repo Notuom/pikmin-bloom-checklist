@@ -1,4 +1,5 @@
 import * as React from "react";
+import { attributions } from "../utils/constants";
 
 export const About: React.FC = () => (
   <>
@@ -114,174 +115,30 @@ export const About: React.FC = () => (
         <strong>Disclaimer:</strong> This web app is not affiliated with Niantic
         or Nintendo.
       </p>
+      <p>
+        Decor Icons were retrieved from:{" "}
+        <a
+          href="https://www.pikminwiki.com/Decor_Pikmin"
+          target="_blank"
+          rel="noreferrer"
+        >
+          https://www.pikminwiki.com/Decor_Pikmin
+        </a>
+      </p>
+      <p>The following icons were used under licenses requiring attribution:</p>
       <ul>
-        <li>
-          Application icon created from{" "}
-          <a
-            href="https://thenounproject.com/icon/checklist-5020438/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Checklist by Mada Creative from NounProject.com
-          </a>{" "}
-          and{" "}
-          <a
-            href="https://thenounproject.com/icon/flower-5021607/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Flower by Ria Fitriana from NounProject.com
-          </a>{" "}
-          using{" "}
-          <a href="https://www.gimp.org/" target="_blank" rel="noreferrer">
-            Gimp
-          </a>
-          . Favicons created using{" "}
-          <a
-            href="https://realfavicongenerator.net"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Favicon Generator
-          </a>{" "}
-          and <a href="https://maskable.app/editor">Maskable.app</a>.
-        </li>
-        <li>
-          Decor Icons retrieved from{" "}
-          <a
-            href="https://www.pikminwiki.com/Decor_Pikmin"
-            target="_blank"
-            rel="noreferrer"
-          >
-            https://www.pikminwiki.com/Decor_Pikmin
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://thenounproject.com/term/beetle/396855/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Beetle by Erik Jensen from the Noun Project
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://thenounproject.com/term/banana/2770445/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            banana by Izwar Muis from the Noun Project
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://thenounproject.com/term/mushroom/3194002/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Mushroom by Adrien Coquet from the Noun Project
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://thenounproject.com/term/acorn/4408016/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Acorn by KP Arts from the Noun Project
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://thenounproject.com/icon/chess-piece-2375089/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Chess Piece by Vectors Point from NounProject.com
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://thenounproject.com/icon/skateboard-1293915/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Skateboard by Orin zuu from Noun Project
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://thenounproject.com/icon/pumpkin-700084/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            pumpkin by Yeong Rong Kim from Noun Project
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://thenounproject.com/icon/june-of-hwatu-1629155/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            june of hwatu by 1516 from Noun Project
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://thenounproject.com/icon/candy-4080734/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            candy by alfian dwi hartanto from Noun Project
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.flaticon.com/free-icon/2023-2025_9243079"
-            target="_blank"
-            rel="noreferrer"
-          >
-            2023 icons created by muhammad atho from Flaticon
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://thenounproject.com/icon/envelope-5393196/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            envelope by Icon Market from Noun Project
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://thenounproject.com/icon/envelope-5395044/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            envelope (inverted) by Icon Market from Noun Project
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://thenounproject.com/icon/space-suit-1652614/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            space suit by Maxim Kulikov from Noun Project
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://thenounproject.com/icon/mitten-2099950/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            mitten by Ninejipjip from Noun Project
-          </a>
-        </li>
+        {attributions.map((attribution) => (
+          <li>
+            <a
+              href={attribution.link}
+              title={attribution.title}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {attribution.text}
+            </a>
+          </li>
+        ))}
       </ul>
       <p>
         Created with{" "}

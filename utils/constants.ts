@@ -1,5 +1,6 @@
 import { capitalizeDecorTitle } from "./strings";
 import {
+  Attribution,
   CollectionView,
   Decor,
   DecorStatus,
@@ -109,31 +110,48 @@ export const decors: Decor[] = [
     key: "restaurant-shiny",
     colors: [PikminColor.Blue, PikminColor.Yellow, PikminColor.Red],
     title: decorTitle("Restaurant (Shiny)"),
-    description:
-      "Rare shiny variation for the Restaurant decor",
+    description: "Rare shiny variation for the Restaurant decor",
     type: DecorType.Special,
     views: [CollectionView.Advanced, CollectionView.Exhaustive],
   },
   createLocationDecor("cafe"),
-  createLocationDecor("sweetshop", { title: decorTitle("Sweetshop (Macaron)")}),
-  createLocationDecor("sweetshop-2", { title: decorTitle("Sweetshop (Donut)")}),
+  createLocationDecor("sweetshop", {
+    title: decorTitle("Sweetshop (Macaron)"),
+  }),
+  createLocationDecor("sweetshop-2", {
+    title: decorTitle("Sweetshop (Donut)"),
+  }),
   createLocationDecor("movie-theater"),
   createLocationDecor("pharmacy"),
   createLocationDecor("zoo"),
-  createLocationDecor("forest-1", { title: decorTitle("Forest (Stag Beetle)") }),
+  createLocationDecor("forest-1", {
+    title: decorTitle("Forest (Stag Beetle)"),
+  }),
   createLocationDecor("forest-2", { title: decorTitle("Forest (Acorn)") }),
   createLocationDecor("waterside"),
   createLocationDecor("post-office"),
   createLocationDecor("art-gallery"),
   createLocationDecor("airport"),
-  createLocationDecor("station", { title: decorTitle("Train station (Paper train)")}),
-  createLocationDecor("station-2", { title: decorTitle("Train station (Ticket)")}),
+  createLocationDecor("station", {
+    title: decorTitle("Train station (Paper train)"),
+  }),
+  createLocationDecor("station-2", {
+    title: decorTitle("Train station (Ticket)"),
+  }),
   createLocationDecor("beach"),
   createLocationDecor("hamburger-shop"),
-  createLocationDecor("mini-mart", { title: decorTitle("Corner Store (Bottle Cap)") }),
-  createLocationDecor("mini-mart-2", { title: decorTitle("Corner Store (Snack)") }),
-  createLocationDecor("supermarket-1", { title: decorTitle("Supermarket (Mushroom)") }),
-  createLocationDecor("supermarket-2", { title: decorTitle("Supermarket (Banana)") }),
+  createLocationDecor("mini-mart", {
+    title: decorTitle("Corner Store (Bottle Cap)"),
+  }),
+  createLocationDecor("mini-mart-2", {
+    title: decorTitle("Corner Store (Snack)"),
+  }),
+  createLocationDecor("supermarket-1", {
+    title: decorTitle("Supermarket (Mushroom)"),
+  }),
+  createLocationDecor("supermarket-2", {
+    title: decorTitle("Supermarket (Banana)"),
+  }),
   createLocationDecor("bakery"),
   createLocationDecor("hair-salon"),
   createLocationDecor("clothing-store"),
@@ -146,17 +164,32 @@ export const decors: Decor[] = [
   createLocationDecor("library"),
   createLocationDecor("roadside"),
   createLocationDecor("sushi"),
-  createLocationDecor("mountain", { colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue]}),
-  createLocationDecor("stadium", { colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue]}),
-  createLocationDecor("weather-1", { colors: [PikminColor.Blue]}),
-  createLocationDecor("weather-2", { colors: [PikminColor.Blue]}),
-  createLocationDecor("weather-3", { colors: [PikminColor.Blue]}),
-  createLocationDecor("themepark-1", { title: decorTitle("Theme Park"), colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue]}),
-  createLocationDecor("themepark-2", { title: decorTitle("Theme Park (alternative design)"), colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue], views: [CollectionView.Advanced, CollectionView.Exhaustive]}),
+  createLocationDecor("mountain", {
+    colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue],
+  }),
+  createLocationDecor("stadium", {
+    colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue],
+  }),
+  createLocationDecor("weather-1", { colors: [PikminColor.Blue] }),
+  createLocationDecor("weather-2", { colors: [PikminColor.Blue] }),
+  createLocationDecor("weather-3", { colors: [PikminColor.Blue] }),
+  createLocationDecor("themepark-1", {
+    title: decorTitle("Theme Park"),
+    colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue],
+  }),
+  createLocationDecor("themepark-2", {
+    title: decorTitle("Theme Park (alternative design)"),
+    colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue],
+    views: [CollectionView.Advanced, CollectionView.Exhaustive],
+  }),
   createLocationDecor("bus-stop"),
   createLocationDecor("italian-restaurant"),
-  createLocationDecor("ramen-restaurant", { colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue]}),
-  createLocationDecor("bridge", { colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue]}),
+  createLocationDecor("ramen-restaurant", {
+    colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue],
+  }),
+  createLocationDecor("bridge", {
+    colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue],
+  }),
   createLocationDecor("hotel"),
 
   // Special Decor Pikmin which are custom in every aspect.
@@ -216,7 +249,12 @@ export const decors: Decor[] = [
   },
   {
     key: "special-flower-card",
-    colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue, PikminColor.Purple],
+    colors: [
+      PikminColor.Red,
+      PikminColor.Yellow,
+      PikminColor.Blue,
+      PikminColor.Purple,
+    ],
     title: "Flower card",
     description:
       "On September 5th, 2022, a new type of special Decor Pikmin wearing hanafuda cards was made obtainable for 3 weeks.",
@@ -227,8 +265,7 @@ export const decors: Decor[] = [
     key: "special-halloween",
     colors,
     title: "Jack-o'-lantern",
-    description:
-      "Special Decor Pikmin for the 2022 Halloween event.",
+    description: "Special Decor Pikmin for the 2022 Halloween event.",
     type: DecorType.Special,
     views: allCollectionViews,
   },
@@ -282,7 +319,7 @@ export const decors: Decor[] = [
     colors,
     title: "Easter Egg",
     description:
-        "From April 1st to April 30th, 2023, for the Easter event, a new set of Decor Pikmin were obtainable. Those Decor Pikmin wore colored egg shells in celebration of Easter.",
+      "From April 1st to April 30th, 2023, for the Easter event, a new set of Decor Pikmin were obtainable. Those Decor Pikmin wore colored egg shells in celebration of Easter.",
     type: DecorType.Special,
     views: allCollectionViews,
   },
@@ -291,7 +328,7 @@ export const decors: Decor[] = [
     colors,
     title: "Sneaker Keychain",
     description:
-        "From May 8th, 2023 through until after May 31st, 2023, gold seedlings from event challenges and referral codes reward players with Sneaker Keychain decor Pikmin.",
+      "From May 8th, 2023 through until after May 31st, 2023, gold seedlings from event challenges and referral codes reward players with Sneaker Keychain decor Pikmin.",
     type: DecorType.Special,
     views: allCollectionViews,
   },
@@ -299,8 +336,23 @@ export const decors: Decor[] = [
     key: "special-spaceship",
     colors,
     title: "Pikmin 4 Spaceships",
-    description:
-        "Pikmin 4 Spaceships",
+    description: "Pikmin 4 Spaceships",
+    type: DecorType.Special,
+    views: allCollectionViews,
+  },
+  {
+    key: "special-mahjong",
+    colors,
+    title: "Mahjong (1st variant)",
+    description: "Mahjong (1st variant)",
+    type: DecorType.Special,
+    views: allCollectionViews,
+  },
+  {
+    key: "special-mahjong-2",
+    colors,
+    title: "Mahjong (2nd variant)",
+    description: "Mahjong (2nd variant)",
     type: DecorType.Special,
     views: allCollectionViews,
   },
@@ -318,7 +370,7 @@ export const decors: Decor[] = [
     colors,
     title: "Roadside Coin",
     description:
-        "These Pikmin only have 1 type per Pikmin, unlike the sticker type, and the coins present on the Pikmin are from all around the world.",
+      "These Pikmin only have 1 type per Pikmin, unlike the sticker type, and the coins present on the Pikmin are from all around the world.",
     type: DecorType.Special,
     views: [CollectionView.Advanced, CollectionView.Exhaustive],
   },
@@ -353,3 +405,129 @@ export const nextStatusMap: Record<DecorStatus, DecorStatus> = {
  * which is why they are not in a logical order.
  */
 export const statusEmojis = ["❌", "✅", "🥚", "🌿"];
+
+/**
+ * List of attributions to render in the About page for icons downloaded under license requiring attribution.
+ */
+export const attributions: Attribution[] = [
+  //
+  {
+    link: "https://thenounproject.com/icon/checklist-5020438/",
+    text: "Checklist by Mada Creative from NounProject.com",
+  },
+  {
+    link: "https://thenounproject.com/icon/flower-5021607/",
+    text: "Flower by Ria Fitriana from NounProject.com",
+  },
+  {
+    link: "https://thenounproject.com/term/beetle/396855/",
+    text: "Beetle by Erik Jensen from the Noun Project",
+  },
+  {
+    link: "https://thenounproject.com/term/banana/2770445/",
+    text: "banana by Izwar Muis from the Noun Project",
+  },
+  {
+    link: "https://thenounproject.com/term/mushroom/3194002/",
+    text: "Mushroom by Adrien Coquet from the Noun Project",
+  },
+  {
+    link: "https://thenounproject.com/term/acorn/4408016/",
+    text: "Acorn by KP Arts from the Noun Project",
+  },
+  {
+    link: "https://thenounproject.com/icon/chess-piece-2375089/",
+    text: "Chess Piece by Vectors Point from NounProject.com",
+  },
+  {
+    link: "https://thenounproject.com/icon/skateboard-1293915/",
+    text: "Skateboard by Orin zuu from Noun Project",
+  },
+  {
+    link: "https://thenounproject.com/icon/pumpkin-700084/",
+    text: "pumpkin by Yeong Rong Kim from Noun Project",
+  },
+  {
+    link: "https://thenounproject.com/icon/june-of-hwatu-1629155/",
+    text: "june of hwatu by 1516 from Noun Project",
+  },
+  {
+    link: "https://thenounproject.com/icon/candy-4080734/",
+    text: "candy by alfian dwi hartanto from Noun Project",
+  },
+  {
+    link: "https://www.flaticon.com/free-icon/2023-2025_9243079",
+    text: "2023 icons created by muhammad atho from Flaticon",
+  },
+  {
+    link: "https://thenounproject.com/icon/envelope-5393196/",
+    text: "envelope by Icon Market from Noun Project",
+  },
+  {
+    link: "https://thenounproject.com/icon/envelope-5395044/",
+    text: "envelope (inverted) by Icon Market from Noun Project",
+  },
+  {
+    link: "https://thenounproject.com/icon/space-suit-1652614/",
+    text: "space suit by Maxim Kulikov from Noun Project",
+  },
+  {
+    link: "https://thenounproject.com/icon/mitten-2099950/",
+    text: "mitten by Ninejipjip from Noun Project",
+  },
+  {
+    link: "https://www.flaticon.com/free-icons/easter",
+    text: "Easter icons created by Freepik - Flaticon",
+    title: "easter icons",
+  },
+  {
+    link: "https://www.flaticon.com/free-icons/stadium",
+    text: "Stadium icons created by Freepik - Flaticon",
+    title: "stadium icons",
+  },
+  {
+    link: "https://www.flaticon.com/free-icons/money",
+    text: "Money icons created by Freepik - Flaticon",
+    title: "money icons",
+  },
+  {
+    link: "https://www.flaticon.com/free-icons/ramen",
+    text: "Ramen icons created by Tanah Basah - Flaticon",
+    title: "ramen icons",
+  },
+  {
+    link: "https://www.flaticon.com/free-icons/sneaker",
+    text: "Sneaker icons created by Freepik - Flaticon",
+    title: "sneaker icons",
+  },
+  {
+    link: "https://www.flaticon.com/free-icons/donut",
+    text: "Donut icons created by Freepik - Flaticon",
+    title: "donut icons",
+  },
+  {
+    link: "https://www.flaticon.com/free-icons/ufo",
+    text: "Ufo icons created by Freepik - Flaticon",
+    title: "ufo icons",
+  },
+  {
+    link: "https://www.flaticon.com/free-icons/bridge",
+    text: "Bridge icons created by Bartama Graphic - Flaticon",
+    title: "bridge icons",
+  },
+  {
+    link: "https://www.flaticon.com/free-icons/hotel",
+    text: "Hotel icons created by Those Icons - Flaticon",
+    title: "hotel icons",
+  },
+  {
+    link: "https://www.flaticon.com/free-icons/chess",
+    text: "Chess icons created by SBTS2018 - Flaticon",
+    title: "chess icons",
+  },
+  {
+    link: "https://www.flaticon.com/free-icons/mahjong",
+    text: "Mahjong icons created by Freepik - Flaticon",
+    title: "mahjong icons",
+  },
+];
