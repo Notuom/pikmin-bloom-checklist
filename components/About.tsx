@@ -127,8 +127,8 @@ export const About: React.FC = () => (
       </p>
       <p>The following icons were used under licenses requiring attribution:</p>
       <ul>
-        {attributions.map((attribution) => (
-          <li>
+        {attributions.map((attribution, index) => (
+          <li key={index}>
             <a
               href={attribution.link}
               title={attribution.title}
