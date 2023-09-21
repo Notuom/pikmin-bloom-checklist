@@ -1,9 +1,11 @@
 import * as React from "react";
 import { attributions } from "../utils/constants";
+import packageInfo from "../package.json"
 
 export const About: React.FC = () => (
   <>
     <section>
+      <p><strong>{`Version ${packageInfo.version}`}</strong></p>
       <h3>What is this?</h3>
       <p>
         This web app is a checklist to help you keep track of which type of
