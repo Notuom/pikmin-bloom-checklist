@@ -310,7 +310,7 @@ export const decors: Decor[] = [
     colors,
     title: "Present Sticker",
     description:
-      "From February 6th, 2023, to February 26th, 2023, for Valentine's Day 2023, a new type of Decor Pikmin was obtainable for 3 weeks. These decor Pikmin wear pink oversized 'present' stickers.",
+      "February 6th 2023 to February 26th 2023. For Valentine's Day 2023, a new type of Decor Pikmin was obtainable for 3 weeks. These decor Pikmin wear pink oversized 'present' stickers.",
     type: DecorType.Special,
     views: allCollectionViews,
   },
@@ -319,7 +319,7 @@ export const decors: Decor[] = [
     colors,
     title: "Easter Egg",
     description:
-      "From April 1st to April 30th, 2023, for the Easter event, a new set of Decor Pikmin were obtainable. Those Decor Pikmin wore colored egg shells in celebration of Easter.",
+      "April 1st 2023 to April 30th 2023. For the Easter event, a new set of Decor Pikmin were obtainable. Those Decor Pikmin wore colored egg shells in celebration of Easter.",
     type: DecorType.Special,
     views: allCollectionViews,
   },
@@ -328,7 +328,7 @@ export const decors: Decor[] = [
     colors,
     title: "Sneaker Keychain",
     description:
-      "From May 8th, 2023 through until after May 31st, 2023, gold seedlings from event challenges and referral codes reward players with Sneaker Keychain decor Pikmin.",
+      "May 8th 2023 to May 31st 2023. Gold seedlings from event challenges and referral codes reward players with Sneaker Keychain decor Pikmin.",
     type: DecorType.Special,
     views: allCollectionViews,
   },
@@ -344,7 +344,8 @@ export const decors: Decor[] = [
     key: "special-mahjong",
     colors,
     title: "Mahjong (1st variant)",
-    description: "August 14th, 2023 September 10th, 2023. Complete Event Challenge missions to obtain gold seedlings for Mahjong Tile Decor Pikmin.",
+    description:
+      "August 14th 2023 to September 10th 2023. Complete Event Challenge missions to obtain gold seedlings for Mahjong Tile Decor Pikmin.",
     type: DecorType.Special,
     views: allCollectionViews,
   },
@@ -352,7 +353,17 @@ export const decors: Decor[] = [
     key: "special-mahjong-2",
     colors,
     title: "Mahjong (2nd variant)",
-    description: "August 14th, 2023 September 10th, 2023. Complete Event Challenge missions to obtain gold seedlings for Mahjong Tile Decor Pikmin.",
+    description:
+      "August 14th 2023 to September 10th 2023. Complete Event Challenge missions to obtain gold seedlings for Mahjong Tile Decor Pikmin.",
+    type: DecorType.Special,
+    views: allCollectionViews,
+  },
+  {
+    key: "special-ice-cream",
+    colors,
+    title: "Ice Cream",
+    description:
+      "September 11th to September 30th 2023. Complete Event Challenge missions to obtain gold seedlings.",
     type: DecorType.Special,
     views: allCollectionViews,
   },
@@ -529,5 +540,10 @@ export const attributions: Attribution[] = [
     link: "https://www.flaticon.com/free-icons/mahjong",
     text: "Mahjong icons created by Freepik - Flaticon",
     title: "mahjong icons",
+  },
+  {
+    link: "https://www.flaticon.com/free-icons/ice-cream",
+    text: "Ice cream icons created by Freepik - Flaticon",
+    title: "ice cream icons",
   },
 ];
