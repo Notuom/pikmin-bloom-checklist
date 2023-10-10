@@ -32,7 +32,7 @@ export const DecorHeader: React.FC<DecorHeaderProps> = ({ decor }) => {
       alt={decor.title}
       data-tooltip-id="decor-title-tooltip"
       data-tooltip-content={tooltip}
-      src={getDecorIcon(decor.key)}
+      src={getDecorIcon(decor.icon ?? decor.key)}
       width={imageSize}
       height={imageSize}
     />

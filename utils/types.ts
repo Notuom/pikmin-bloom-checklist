@@ -57,6 +57,8 @@ export interface Decor {
   views: CollectionView[];
   // Only for "Roadside" decor: the sticker color
   roadsideColor?: RoadsideStickerColor;
+  // Overrides the icon base filename (defaults to the key).
+  icon?: string;
 }
 
 export interface Attribution {

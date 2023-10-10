@@ -250,6 +250,7 @@ export const decors: Decor[] = [
   },
   {
     key: "special-flower-card",
+    icon: "special-flower-card",
     colors: [
       PikminColor.Red,
       PikminColor.Yellow,
@@ -258,9 +259,84 @@ export const decors: Decor[] = [
     ],
     title: "Flower card",
     description:
-      "On September 5th, 2022, a new type of special Decor Pikmin wearing hanafuda cards was made obtainable for 3 weeks.",
+      "Available in September 2022 and again in September 2023. 6 different Flower Card designs per Pikmin.",
     type: DecorType.Special,
     views: allCollectionViews,
+  },
+  {
+    key: "special-flower-card-2",
+    icon: "special-flower-card",
+    colors: [
+      PikminColor.Red,
+      PikminColor.Yellow,
+      PikminColor.Blue,
+      PikminColor.Purple,
+    ],
+    title: "Flower card",
+    description:
+      "Design #2. Available in September 2022 and again in September 2023. 6 different Flower Card designs per Pikmin.",
+    type: DecorType.Special,
+    views: [CollectionView.Exhaustive],
+  },
+  {
+    key: "special-flower-card-3",
+    icon: "special-flower-card",
+    colors: [
+      PikminColor.Red,
+      PikminColor.Yellow,
+      PikminColor.Blue,
+      PikminColor.Purple,
+    ],
+    title: "Flower card",
+    description:
+      "Design #3. Available in September 2022 and again in September 2023. 6 different Flower Card designs per Pikmin.",
+    type: DecorType.Special,
+    views: [CollectionView.Exhaustive],
+  },
+  {
+    key: "special-flower-card-4",
+    icon: "special-flower-card",
+    colors: [
+      PikminColor.Red,
+      PikminColor.Yellow,
+      PikminColor.Blue,
+      PikminColor.Purple,
+    ],
+    title: "Flower card",
+    description:
+      "Design #4. Available in September 2022 and again in September 2023. 6 different Flower Card designs per Pikmin.",
+    type: DecorType.Special,
+    views: [CollectionView.Exhaustive],
+  },
+  {
+    key: "special-flower-card-5",
+    icon: "special-flower-card",
+    colors: [
+      PikminColor.Red,
+      PikminColor.Yellow,
+      PikminColor.Blue,
+      PikminColor.Purple,
+    ],
+    title: "Flower card",
+    description:
+      "Design #5. Available in September 2022 and again in September 2023. 6 different Flower Card designs per Pikmin.",
+    type: DecorType.Special,
+    views: [CollectionView.Exhaustive],
+  },
+  {
+    key: "special-flower-card-6",
+    icon: "special-flower-card",
+    colors: [
+      PikminColor.Red,
+      PikminColor.Yellow,
+      PikminColor.Blue,
+      PikminColor.Purple,
+    ],
+    title: "Flower card",
+    description:
+      "Design #6. Available in September 2022 and again in September 2023. 6 different Flower Card designs per Pikmin.",
+    type: DecorType.Special,
+    views: [CollectionView.Exhaustive],
   },
   {
     key: "special-halloween",
