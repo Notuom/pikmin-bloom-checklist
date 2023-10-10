@@ -412,6 +412,21 @@ export const decors: Decor[] = [
     views: allCollectionViews,
   },
   {
+    key: "special-present-sticker-gold",
+    icon: "special-present-sticker",
+    colors: [
+      PikminColor.Red,
+      PikminColor.Yellow,
+      PikminColor.Blue,
+      PikminColor.White,
+    ],
+    title: "Present Sticker (Gold)",
+    description:
+      "Special version of the Present Sticker decor available at Nintendo Live Seattle 2023 and potentially other events.",
+    type: DecorType.Special,
+    views: allCollectionViews,
+  },
+  {
     key: "special-easter-egg",
     colors,
     title: "Easter Egg",
