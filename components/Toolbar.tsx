@@ -24,7 +24,7 @@ export const Toolbar: React.FC<ToolbarProps> = ({ clear, collection }) => {
 
   const confirmClear = () =>
     confirm(
-      "Are you sure you want to proceed with permanently deleting your progress?"
+      "Are you sure you want to proceed with permanently deleting your progress?",
     ) && clear();
 
   const share = (collection: DecorCollection) => {
@@ -36,8 +36,8 @@ export const Toolbar: React.FC<ToolbarProps> = ({ clear, collection }) => {
       .then(() => setClipboardOutput("Share URL copied to clipboard!"))
       .catch(() =>
         setClipboardOutput(
-          "Could not access clipboard. Please try again or copy the URL from the text input above."
-        )
+          "Could not access clipboard. Please try again or copy the URL from the text input above.",
+        ),
       );
   };
 

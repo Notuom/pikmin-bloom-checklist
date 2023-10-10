@@ -53,7 +53,7 @@ const decorTitle = (text: string) => `Decor Pikmin for: ${text}`;
  */
 const createLocationDecor = (
   key: string,
-  overrides?: Partial<Decor>
+  overrides?: Partial<Decor>,
 ): Decor => ({
   key,
   type: DecorType.Location,
@@ -89,7 +89,7 @@ const createRoadsideColorDecors = (): Decor[] =>
       colors,
       views: [CollectionView.Exhaustive],
       roadsideColor,
-    }))
+    })),
   );
 
 /**

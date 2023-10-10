@@ -16,13 +16,13 @@ export const useDecorCollection = () => {
   // Get initial collection status from storage on page load
   React.useEffect(() => {
     const urlCollection = new URL(window.location.href).searchParams.get(
-      "collection"
+      "collection",
     );
     const storageCollection = localStorage.getItem(storageKey);
     if (
       urlCollection &&
       confirm(
-        "There was a collection in the URL. Do you want to import & override your current collection? This cannot be undone."
+        "There was a collection in the URL. Do you want to import & override your current collection? This cannot be undone.",
       )
     ) {
       try {

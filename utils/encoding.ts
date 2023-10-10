@@ -73,7 +73,7 @@ export const decodeCollection = (encoded: string) => {
 
   if (encodedVersion !== SCHEMA_VERSION) {
     throw new Error(
-      `Decoding failed. The collection was encoded with a previous version (${encodedVersion}), which is not compatible with the current version (${SCHEMA_VERSION}). Please re-share the collection with the latest version of the site.`
+      `Decoding failed. The collection was encoded with a previous version (${encodedVersion}), which is not compatible with the current version (${SCHEMA_VERSION}). Please re-share the collection with the latest version of the site.`,
     );
   }
 
