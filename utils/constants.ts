@@ -56,6 +56,7 @@ const createLocationDecor = (
   overrides?: Partial<Decor>,
 ): Decor => ({
   key,
+  icon: overrides?.icon,
   type: DecorType.Location,
   title: overrides?.title ?? decorTitle(capitalizeDecorTitle(key)),
   description: overrides?.description,
@@ -170,15 +171,26 @@ export const decors: Decor[] = [
   createLocationDecor("stadium", {
     colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue],
   }),
-  createLocationDecor("weather-1", { colors: [PikminColor.Blue] }),
-  createLocationDecor("weather-2", { colors: [PikminColor.Blue] }),
-  createLocationDecor("weather-3", { colors: [PikminColor.Blue] }),
+  createLocationDecor("weather-1", {
+    icon: "weather",
+    colors: [PikminColor.Blue],
+  }),
+  createLocationDecor("weather-2", {
+    icon: "weather",
+    colors: [PikminColor.Blue],
+  }),
+  createLocationDecor("weather-3", {
+    icon: "weather",
+    colors: [PikminColor.Blue],
+  }),
   createLocationDecor("themepark-1", {
     title: decorTitle("Theme Park"),
+    icon: "themepark",
     colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue],
   }),
   createLocationDecor("themepark-2", {
     title: decorTitle("Theme Park (alternative design)"),
+    icon: "themepark",
     colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue],
     views: [CollectionView.Advanced, CollectionView.Exhaustive],
   }),
@@ -342,7 +354,15 @@ export const decors: Decor[] = [
     key: "special-halloween",
     colors,
     title: "Jack-o'-lantern",
-    description: "Special Decor Pikmin for the 2022 Halloween event.",
+    description: "Special Decor Pikmin for the 2022 & 2023 Halloween event.",
+    type: DecorType.Special,
+    views: allCollectionViews,
+  },
+  {
+    key: "special-halloween-2",
+    colors,
+    title: "Halloween Treat",
+    description: "Special Decor Pikmin for the 2023 Halloween event.",
     type: DecorType.Special,
     views: allCollectionViews,
   },
@@ -622,5 +642,10 @@ export const attributions: Attribution[] = [
     link: "https://www.flaticon.com/free-icons/ice-cream",
     text: "Ice cream icons created by Freepik - Flaticon",
     title: "ice cream icons",
+  },
+  {
+    link: "https://www.flaticon.com/free-icons/candy",
+    text: "Candy icons created by pancaza - Flaticon",
+    title: "candy icons",
   },
 ];
