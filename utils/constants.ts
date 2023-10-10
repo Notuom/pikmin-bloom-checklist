@@ -191,6 +191,7 @@ export const decors: Decor[] = [
     colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue],
   }),
   createLocationDecor("hotel"),
+  createLocationDecor("makeup"),
 
   // Special Decor Pikmin which are custom in every aspect.
   {
