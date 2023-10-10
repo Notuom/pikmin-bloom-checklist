@@ -30,7 +30,8 @@ export const DecorHeader: React.FC<DecorHeaderProps> = ({ decor }) => {
     <Image
       loader={decorLoader}
       alt={decor.title}
-      data-tip={tooltip}
+      data-tooltip-id="decor-title-tooltip"
+      data-tooltip-content={tooltip}
       src={getDecorIcon(decor.key)}
       width={imageSize}
       height={imageSize}

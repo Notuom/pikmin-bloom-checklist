@@ -1,5 +1,5 @@
 import * as React from "react";
-import ReactTooltip from "react-tooltip";
+import { Tooltip } from "react-tooltip";
 
 import { useViewContext } from "../context/ViewContext";
 import { cycleStatus, useDecorCollection } from "../hooks/useDecorCollection";
@@ -15,20 +15,10 @@ export const Checklist: React.FC = () => {
   const { collection, get, set, clear } = useDecorCollection();
   const { view } = useViewContext();
 
-  React.useEffect(() => {
-    // ReactTooltip needs to be told when tooltipped elements on the page change.
-    ReactTooltip.rebuild();
-  }, [view]);
-
   return (
     <>
       <TopToolbar />
-      <ReactTooltip
-        place="right"
-        effect="solid"
-        backgroundColor="black"
-        textColor="white"
-      />
+      <Tooltip id="decor-title-tooltip" place="right" variant="dark" />
       <table className={styles.table}>
         <thead>
           <tr>
@@ -65,7 +55,7 @@ export const Checklist: React.FC = () => {
                     );
                   })}
                 </tr>
-              )
+              ),
           )}
         </tbody>
       </table>

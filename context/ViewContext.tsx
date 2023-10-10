@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { CollectionView } from "../utils/types";
+import { PropsWithChildren } from "react";
 
 export interface ViewContextValue {
   view: CollectionView;
@@ -16,9 +17,11 @@ export const useViewContext = () => React.useContext(ViewContext);
 
 const storageKey = "decorView";
 
-export const ViewContextProvider: React.FC = ({ children }) => {
+export const ViewContextProvider: React.FC<PropsWithChildren> = ({
+  children,
+}) => {
   const [view, setInternalView] = React.useState<CollectionView>(
-    CollectionView.Advanced
+    CollectionView.Advanced,
   );
   React.useEffect(() => {
     const storedView = localStorage.getItem(storageKey) as CollectionView;
@@ -31,7 +34,7 @@ export const ViewContextProvider: React.FC = ({ children }) => {
       setInternalView(updatedView);
       localStorage.setItem(storageKey, updatedView);
     },
-    [setInternalView]
+    [setInternalView],
   );
   const context = { view, setView };
 
