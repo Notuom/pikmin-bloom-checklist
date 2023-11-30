@@ -53,7 +53,7 @@ const decorTitle = (text: string) => `Decor Pikmin for: ${text}`;
  */
 const createLocationDecor = (
   key: string,
-  overrides?: Partial<Decor>,
+  overrides?: Partial<Decor>
 ): Decor => ({
   key,
   icon: overrides?.icon,
@@ -90,7 +90,7 @@ const createRoadsideColorDecors = (): Decor[] =>
       colors,
       views: [CollectionView.Exhaustive],
       roadsideColor,
-    })),
+    }))
   );
 
 /**
@@ -480,6 +480,26 @@ export const decors: Decor[] = [
     views: allCollectionViews,
   },
   {
+    key: "special-puzzle-2021-fall",
+    colors,
+    title: "Puzzle: 2021 fall memories",
+    description:
+      "From November 3rd to November 26th, 2023, for the second Anniversary Event, 2 new sets of Decor Pikmin were obtainable.",
+    type: DecorType.Special,
+    views: allCollectionViews,
+  },
+  {
+    key: "special-puzzle-2022-summer",
+    colors,
+    title: "Puzzle: 2022 summer memories",
+    description:
+      "From November 3rd to November 26th, 2023, for the second Anniversary Event, 2 new sets of Decor Pikmin were obtainable.",
+    type: DecorType.Special,
+    views: allCollectionViews,
+  },
+
+  // Advanced/Exhaustive Specials
+  {
     key: "special-holiday-stickers",
     colors,
     title: "Holiday Sticker",
@@ -662,5 +682,10 @@ export const attributions: Attribution[] = [
     link: "https://www.flaticon.com/free-icons/candy",
     text: "Candy icons created by pancaza - Flaticon",
     title: "candy icons",
+  },
+  {
+    link: "https://www.flaticon.com/free-icons/puzzle",
+    text: "Puzzle icons created by Google - Flaticon",
+    title: "puzzle icons",
   },
 ];
