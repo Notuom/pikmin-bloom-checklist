@@ -377,10 +377,10 @@ export const decors: Decor[] = [
   },
   {
     key: "special-mitten",
-    colors: [PikminColor.Blue, PikminColor.Yellow, PikminColor.Red],
+    colors,
     title: "Mitten",
     description:
-      "From December 12th to December 31st, 2022, a new type of Decor Pikmin was obtainable for an event. These Decor Pikmin wear small mittens on their heads.",
+      "Available in December 2022 and again in December 2023. These Decor Pikmin wear small mittens on their heads.",
     type: DecorType.Special,
     views: allCollectionViews,
   },
