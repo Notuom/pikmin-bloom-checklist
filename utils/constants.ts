@@ -172,16 +172,19 @@ export const decors: Decor[] = [
     colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue],
   }),
   createLocationDecor("weather-1", {
+    title: "Weather",
     icon: "weather",
     colors: [PikminColor.Blue],
   }),
   createLocationDecor("weather-2", {
     icon: "weather",
     colors: [PikminColor.Blue],
+    views: [CollectionView.Exhaustive],
   }),
   createLocationDecor("weather-3", {
     icon: "weather",
     colors: [PikminColor.Blue],
+    views: [CollectionView.Exhaustive],
   }),
   createLocationDecor("themepark-1", {
     title: decorTitle("Theme Park"),
@@ -204,6 +207,53 @@ export const decors: Decor[] = [
   }),
   createLocationDecor("hotel"),
   createLocationDecor("makeup"),
+
+  createLocationDecor("appliances-store-battery-1", {
+    title: "Appliances Store: Battery",
+    icon: "appliances-store",
+    colors: [PikminColor.Yellow],
+  }),
+  createLocationDecor("appliances-store-battery-2", {
+    title: "Appliances Store: Battery 2",
+    icon: "appliances-store",
+    colors: [PikminColor.Yellow],
+    views: [CollectionView.Exhaustive],
+  }),
+  createLocationDecor("appliances-store-battery-3", {
+    title: "Appliances Store: Battery 3",
+    icon: "appliances-store",
+    colors: [PikminColor.Yellow],
+    views: [CollectionView.Exhaustive],
+  }),
+  createLocationDecor("appliances-store-battery-4", {
+    title: "Appliances Store: Battery 4",
+    icon: "appliances-store",
+    colors: [PikminColor.Yellow],
+    views: [CollectionView.Exhaustive],
+  }),
+  createLocationDecor("appliances-store-battery-5", {
+    title: "Appliances Store: Battery 5",
+    icon: "appliances-store",
+    colors: [PikminColor.Yellow],
+    views: [CollectionView.Exhaustive],
+  }),
+  createLocationDecor("appliances-store-battery-6", {
+    title: "Appliances Store: Battery 6",
+    icon: "appliances-store",
+    colors: [PikminColor.Yellow],
+    views: [CollectionView.Exhaustive],
+  }),
+  createLocationDecor("appliances-store-fairy-lights-1", {
+    title: "Appliances Store: Fairy Lights",
+    icon: "appliances-store",
+    colors: [PikminColor.Yellow],
+  }),
+  createLocationDecor("appliances-store-fairy-lights-2", {
+    title: "Appliances Store: Fairy Lights 2",
+    icon: "appliances-store",
+    colors: [PikminColor.Yellow],
+    views: [CollectionView.Exhaustive],
+  }),
 
   // Special Decor Pikmin which are custom in every aspect.
   {
