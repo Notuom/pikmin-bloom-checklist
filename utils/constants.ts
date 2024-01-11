@@ -547,6 +547,51 @@ export const decors: Decor[] = [
     type: DecorType.Special,
     views: allCollectionViews,
   },
+  {
+    key: "special-fortune-1",
+    icon: "special-fortune",
+    colors,
+    title: "Fortune (Very Lucky)",
+    description: "Exclusive to Japan",
+    type: DecorType.Special,
+    views: [CollectionView.Exhaustive],
+  },
+  {
+    key: "special-fortune-2",
+    icon: "special-fortune",
+    colors,
+    title: "Fortune",
+    description: "Exclusive to Japan",
+    type: DecorType.Special,
+    views: allCollectionViews,
+  },
+  {
+    key: "special-fortune-3",
+    icon: "special-fortune",
+    colors,
+    title: "Fortune (Pretty Lucky)",
+    description: "Exclusive to Japan",
+    type: DecorType.Special,
+    views: [CollectionView.Exhaustive],
+  },
+  {
+    key: "special-fortune-4",
+    icon: "special-fortune",
+    colors,
+    title: "Fortune (A Little Lucky)",
+    description: "Exclusive to Japan",
+    type: DecorType.Special,
+    views: [CollectionView.Exhaustive],
+  },
+  {
+    key: "special-fortune-5",
+    icon: "special-fortune",
+    colors,
+    title: "Fortune (Future Luck)",
+    description: "Exclusive to Japan",
+    type: DecorType.Special,
+    views: [CollectionView.Exhaustive],
+  },
 
   // Advanced/Exhaustive Specials
   {
@@ -737,5 +782,10 @@ export const attributions: Attribution[] = [
     link: "https://www.flaticon.com/free-icons/puzzle",
     text: "Puzzle icons created by Google - Flaticon",
     title: "puzzle icons",
+  },
+  {
+    link: "https://www.flaticon.com/free-icons/blessing",
+    text: "Blessing icons created by Eucalyp - Flaticon",
+    title: "blessing icons",
   },
 ];
