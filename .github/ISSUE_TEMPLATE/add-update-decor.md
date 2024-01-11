@@ -15,15 +15,15 @@ assignees: ''
 
 ## Decor Link
 
-<-- Instructions: Enter link with details about the decor, if applicable -->
+<!-- Instructions: Enter link with details about the decor, if applicable -->
 
 ## Decor Icon
 
-<-- Instructions: Link to an icon that can be used with or without attribution, i.e. https://www.flaticon.com/free-icon/triangle_649762 -->
+<!-- Instructions: Link to an icon that can be used with or without attribution, i.e. https://www.flaticon.com/free-icon/triangle_649762 -->
 
 ## Description
 
-<-- Instructions: Enter full description to be displayed in tooltip -->
+<!-- Instructions: Enter full description to be displayed in tooltip -->
 
 ## Applicable Colors
 
@@ -43,5 +43,3 @@ assignees: ''
 
 - Location
 - Special
-
-##
