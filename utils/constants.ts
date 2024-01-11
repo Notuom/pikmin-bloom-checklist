@@ -459,6 +459,15 @@ export const decors: Decor[] = [
     views: allCollectionViews,
   },
   {
+    key: "special-2024-glasses",
+    icon: "special-2023-glasses",
+    colors,
+    title: "2024 glasses",
+    description: "New Year's 2024",
+    type: DecorType.Special,
+    views: allCollectionViews,
+  },
+  {
     key: "special-present-sticker",
     colors,
     title: "Present Sticker",
