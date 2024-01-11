@@ -2,7 +2,7 @@
 name: Add/Update Decor
 about: Add new or update existing decor
 title: 'Add/Update Decor: [Decor Name]'
-labels: ''
+labels: decor
 assignees: ''
 
 ---
